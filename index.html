@@ -6,7 +6,7 @@
     <meta charset="utf-8">
     <meta name="description" content="Visit Community Science Museum to explore hands-on exhibitions, discover the cosmos, and learn more about the Young Stars club for curious kids.">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="images/rainy-days-logo/favicon.ico">
+    <link rel="icon" href="#" type="image/x-icon"> 
     <link rel="stylesheet" href="css/tokens.css">
     <link rel="stylesheet" href="css/base.css">
     <link rel="stylesheet" href="css/layout.css">
@@ -14,72 +14,130 @@
     <link rel="stylesheet" href="css/utilities.css">
   </head>
   <body>
-    <a class="skip-link" href="#main"></a>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <div class="topbar">
-      <div class="topbar-inner">
-        <nav class="top-nav">
-          <ul></ul>
-        </nav>
-        <div class="country-select"></div>
-      </div>
+        <div class="topbar-inner">
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+            </nav>
+            <div class="country-select">
+                <select id="topbar-country-select" name="country" aria-label="Select your country">
+                    <option value="">Country</option>
+                    <option value="norway">Norwegian</option>
+                    <option value="denmark">Danish</option>
+                    <option value="sweden">Swedish</option>
+                    <option value="england">English</option>
+                    <option value="germany">German</option>
+                </select>
+                <img src="images/stock-photos/pixabay-flag-norway.jpg" alt="Norway flag">
+            </div>
+        </div>
     </div>
 
     <header>
-      <div class="header-inner">
-        <a href="index.html" class="logo"></a>
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <picture>
+                    <source media="(min-width: 900px)" srcset="images/rainy-days-logo/rainy-days-logo.png">
+                    <img src="images/project-images/SP1-logo-update.png" alt="Museum of Science Logo">
+                </picture>
+            </a>
 
-        <nav class="main-nav" aria-label="Desktop navigation">
-          <ul class="nav-list"></ul>
-        </nav>
+            <nav class="main-nav" aria-label="Desktop navigation">    
+                <ul class="nav-list">
+                    <li><a href="exhibitions.html">Exhibitions</a></li>
+                    <li><a href="visit.html">Visit Us</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
 
-        <div class="header-icons"></div>
-      </div>
+            <div class="header-icons">
+                <a href="#search" class="icon-link" aria-label="Search products"><i class="fa-solid fa-magnifying-glass"></i></a>
+                <label for="menu-toggle" class="menu-toggle-label icon-link">
+                    <i class="fa-solid fa-bars"></i>
+                    <span class="sr-only">Toggle navigation menu</span>
+                </label>
+            </div>
+        </div>
 
-      <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
-      <nav class="main-nav-mobile" aria-label="Mobile navigation">
-        <ul class="nav-list-mobile"></ul>
-      </nav>
-    </header>
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+          <nav class="main-nav-mobile" aria-label="Mobile navigation">
+              <ul class="nav-list-mobile">
+                  <li>
+                      <details class="mobile-dropdown">
+                          <summary>Women <i class="fa-solid fa-chevron-down"></i></summary>
+                          <ul class="mobile-sub-menu">
+                              <li><a href="exhibitions.html">Exhibitions</a></li>
+                              <li><a href="visit.html">Visit Us</a></li>
+                              <li><a href="events.html">Events</a></li>
+                          </ul>
+                      </details>
+                  </li>
+              </ul>
+          </nav>
+
+          <div class="cta-panel">
+            <a href="visit.html#tickets" class="ticket-btn">Ticket</a>
+          </div>
+        </div>
+      </header>
 
     <main id="main">
-      <section class="hero-banner" aria-label="Community Science Museum hero introduction"></section>
-
-      <div class="container">
-        <div class="home-grid">
-          <div class="left-column">
-            <section class="shop-categories category-grid" aria-label="Museum exhibition categories"></section>
-            <article class="product-card featured-one"></article>
-          </div>
-
-          <div class="right-column">
-            <article class="product-card featured-two"></article>
-            <section class="shop-promos promo-grid" aria-label="Museum highlights and promotions"></section>
-          </div>
+      <div class="container hero-container">
+        <div class="hero-content-cosmology">
+          <h1>JOIN US IN THE COSMOS!</h1>
+          <h2>--- Explore the origins of light and matter</h2>
+          <button class="cta-btn">The Night Sky</button>
+          <button class="cta-btn">Solar Exploration</button>
+          <button class="cta-btn">The Sky Above Us</button>
+        </div>
+        <div class="hero-image-cosmology">
+          <img src="images/project-images/cosmology-hero.jpg" alt="Cosmology exhibition image">
         </div>
       </div>
     </main>
 
     <footer>
       <div class="footer-inner">
-        <div class="footer-newsletter"></div>
+        <div class="footer-newsletter">
+          <h2>Stay updated</h2>
+          <p>Get updates about exhibitions, events, holiday clubs, and museum news.</p>
+          <p><a href="coming-soon.html">Sign up for updates</a></p>
+        </div>
 
         <nav class="footer-nav" aria-label="Footer navigation">
-          <ul></ul>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="exhibitions.html">Exhibitions</a></li>
+            <li><a href="cosmology.html">Cosmology</a></li>
+            <li><a href="events.html">Events &amp; Community</a></li>
+            <li><a href="visit.html">Visit Us</a></li>
+          </ul>
         </nav>
 
-        <div class="footer-icons"></div>
+        <div class="footer-icons">
+          <p>Community Science Museum</p>
+          <p>Admission is free for all.</p>
+        </div>
 
-        <a href="index.html" class="logo-footer"></a>
+        <a href="index.html" class="logo-footer">Community Science Museum</a>
       </div>
     </footer>
 
     <div class="bottombar">
       <div class="bottombar-inner">
         <nav class="bottom-nav">
-          <ul></ul>
+          <ul>
+            <li><a href="coming-soon.html">Contact</a></li>
+            <li><a href="coming-soon.html">Newsletter</a></li>
+            <li><a href="coming-soon.html">Donate</a></li>
+          </ul>
         </nav>
-        <div class="country-select"></div>
+        <div class="country-select">Open to all curious minds</div>
       </div>
     </div>
   </body>

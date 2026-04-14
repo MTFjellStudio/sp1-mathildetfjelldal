@@ -3,16 +3,35 @@
    ======================================== */
 
 /* ========================================
-	RAINY DAYS DESIGN TOKENS
+	SEMESTER PROJECT 1 DESIGN TOKENS
    ======================================== */
 
 /* ========================================
 	FONT IMPORTS
    ======================================== */
 
+   @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+   .righteous-regular {
+   font-family: "Righteous", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   }
+
+
+:root {
 /* ========================================
 	COLORS
    ======================================== */
+
+
+  --color-body: #001a3d;
+  --color-blue: #0c1f36;
+  --color-bkg: #F7F5ED;
+  --color-yellow: #efd25c;
+  --color-red: #b5301f;
+  --header-border: 4px;
+
 
 /* ========================================
 	TYPOGRAPHY
@@ -45,3 +64,4 @@
 /* ========================================
 	DESKTOP OVERRIDES (900PX+)
    ======================================== */
+}
