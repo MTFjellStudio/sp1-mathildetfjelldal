@@ -38,17 +38,25 @@
    }
 
 /* ========================================
-	BODY - Margin either here or in layout.css. Make sure margin isnt doubled.
+	BODY - Moved to layout.css
    ======================================== */
 
       body {
-    margin: 0;
-    padding: var(--space-md);
-    font-family: var(--font-body); /*Check that padding is off if universal container in layout is on*/
-    color: var(--color-text-dark);
-    line-height: 1.6;
-    background-color: var(--color-bg);
-   }
+      margin: 16px;
+      font-family: var(--font-body);
+      color: var(--color-text-dark);
+      line-height: 1.6;
+      background-color: var(--color-bg);
+
+      @media (min-width: 450px) {
+         margin: 20px;
+      }
+
+      @media (min-width: 900px) {
+         margin: 80px;
+      }
+
+}
 
 /* ========================================
 	MEDIA

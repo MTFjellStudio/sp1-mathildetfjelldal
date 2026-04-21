@@ -6,21 +6,21 @@
 	UNIVERSAL CONTAINER
    ======================================== */
 
-   /* UNIVERSAL CONTAINER - Here or in base.css? Make sure margin isnt doubled. */ 
+   /* UNIVERSAL CONTAINER - Moved to base.css */ 
 
 .container {
-    margin: 0 16px;
+    margin: 0 0px;
 }
 
 @media (min-width: 450px) {
     .container {
-        margin: 0 20px;
+        margin: 0 0px;
     }
 }
 
 @media (min-width: 900px) {
     .container {
-        margin: 0 80px;
+        margin: 0 0px;
     }
 }
 
@@ -100,6 +100,40 @@
       width: auto;
    }
 
+   .main-nav {
+      display: none;
+   }
+
+   .menu-toggle-checkbox {
+      display: none;
+   }
+
+   .main-nav-mobile {
+      display: none;
+      padding: 0 var(--margin-page) var(--space-md);
+   }
+
+   .menu-toggle-checkbox:checked + .main-nav-mobile {
+      display: block;
+   }
+
+   @media (max-width: 899px) {
+      .main-nav {
+         display: none;
+      }
+   }
+   
+   @media (min-width: 450px) {
+      .header-inner {
+         padding: var(--space-md) var(--margin-page);
+      }
+
+      .logo img {
+         height: 100px;
+         width: auto;
+      }
+   }
+
    @media (min-width: 900px) {
     .header-inner {
         padding: var(--space-lg) var(--margin-page);
@@ -109,7 +143,27 @@
     .logo img {
     height: 120px;
     width: auto;
+    }
+
+   .main-nav {
+      display: block;
    }
+
+   .nav-list {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: var(--space-lg);
+      font-family: var(--font-heading);
+      font-size: var(--font-size-h3);
+   }
+
+   .menu-toggle-label,
+   .menu-toggle-checkbox,
+   .main-nav-mobile {
+      display: none;
+   }
+
    }
 
 /* ========================================
@@ -131,7 +185,6 @@
    .banner {
       background-color: var(--color-blue);
       color: var(--color-bkg);
-      border-bottom: 2px solid var(--color-red);
    }
 
    .banner-inner {
