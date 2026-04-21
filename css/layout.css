@@ -6,13 +6,111 @@
 	UNIVERSAL CONTAINER
    ======================================== */
 
+   /* UNIVERSAL CONTAINER - Here or in base.css? Make sure margin isnt doubled. */ 
+
+.container {
+    margin: 0 16px;
+}
+
+@media (min-width: 450px) {
+    .container {
+        margin: 0 20px;
+    }
+}
+
+@media (min-width: 900px) {
+    .container {
+        margin: 0 80px;
+    }
+}
+
 /* ========================================
 	TOPBAR (DESKTOP-ONLY: LOGIN, BLOG, SUPPORT, COUNTRY)
    ======================================== */
 
+   .topbar {
+    display: none;
+    background-color: var(--color-primary-dark);
+    color: var(--color-white);
+    font-family: var(--font-body);
+    font-size: var(--font-size-sm);
+    padding: var(--space-xs) 0;
+   }
+
+   .topbar-inner {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      gap: var(--gutter-mobile);
+      padding: 0 var(--margin-page);
+      width: 100%;
+      margin-left: 0;
+   }
+
+   .top-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      gap: var(--gutter-mobile);
+      flex-wrap: wrap;
+   }
+
+   @media (min-width: 900px) {
+      .topbar {
+         display: flex;
+      }
+
+      .topbar-inner {
+         gap: var(--gutter-mobile);
+         padding: 0 var(--margin-page);
+      }
+
+      .top-nav ul {
+         gap: var(--gutter-mobile);
+      }
+   }
+   
 /* ========================================
 	MAIN HEADER (LOGO, NAV, ICONS)
    ======================================== */
+
+   header {
+      background-color: var(--color-secondary);
+      border-bottom: 1px solid var(--color-border);
+      position: relative;
+   }
+
+   .header-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--space-md) var(--margin-page);
+      gap: var(--gutter-mobile);
+   }
+
+   .logo {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+   }
+
+   .logo img {
+      height: 80px;
+      width: auto;
+   }
+
+   @media (min-width: 900px) {
+    .header-inner {
+        padding: var(--space-lg) var(--margin-page);
+        gap: var(--space-lg);
+    }
+
+    .logo img {
+    height: 120px;
+    width: auto;
+   }
+   }
 
 /* ========================================
 	HEADER ICONS
@@ -29,6 +127,64 @@
 /* ========================================
 	HERO SECTION
    ======================================== */
+
+   .banner {
+      background-color: var(--color-blue);
+      color: var(--color-bkg);
+      border-bottom: 2px solid var(--color-red);
+   }
+
+   .banner-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: var(--space-md);
+      padding: var(--space-sm) var(--space-md);
+   }
+
+   .banner-welcome {
+      display: none;
+      margin: 0;
+      font-family: var(--font-heading);
+      font-size: var(--font-size-sm);
+      letter-spacing: var(--letter-spacing-wide);
+      text-transform: uppercase;
+   }
+
+   .banner-info-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+      margin: 0;
+      font-size: var(--font-size-sm);
+      line-height: var(--line-height-tight);
+   }
+
+   .banner-address {
+      display: none;
+   }
+
+   @media (min-width: 900px) {
+      .banner-inner {
+         padding: var(--space-sm) var(--space-lg);
+      }
+
+      .banner-welcome {
+         display: block;
+         white-space: nowrap;
+      }
+
+      .banner-info-list {
+         flex-direction: row;
+         align-items: center;
+         gap: var(--space-lg);
+         margin-left: auto;
+      }
+
+      .banner-address {
+         display: list-item;
+      }
+   }
 
 /* ========================================
 	FOOTER
