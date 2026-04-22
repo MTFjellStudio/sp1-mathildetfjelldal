@@ -9,7 +9,6 @@
       html {
       box-sizing: border-box;
       font-size: 100%;
-      font-family: var(--font-body);
    }
 
    *, *:before, *:after {
@@ -38,15 +37,15 @@
    }
 
 /* ========================================
-	BODY - Moved to layout.css
+	BODY - Margin moved from layout.css
    ======================================== */
 
       body {
       margin: 16px;
       font-family: var(--font-body);
-      color: var(--color-text-dark);
+      color: var(--color-body);
       line-height: 1.6;
-      background-color: var(--color-bg);
+      background-color: var(--color-bkg);
 
       @media (min-width: 450px) {
          margin: 20px;

@@ -42,7 +42,7 @@
         <div class="header-inner">
             <a href="index.html" class="logo">
                 <picture>
-                    <source media="(min-width: 900px)" srcset="images/rainy-days-logo/rainy-days-logo.png">
+                    <source media="(min-width: 900px)" srcset="images/project-images/SP1-logo-update.png">
                     <img src="images/project-images/SP1-logo-update.png" alt="Museum of Science Logo">
                 </picture>
             </a>
@@ -65,46 +65,73 @@
         </div>
 
         <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
-          <nav class="main-nav-mobile" aria-label="Mobile navigation">
-              <ul class="nav-list-mobile">
-                  <li>
-                      <details class="mobile-dropdown">
-                          <summary>Women <i class="fa-solid fa-chevron-down"></i></summary>
-                          <ul class="mobile-sub-menu">
-                              <li><a href="exhibitions.html">Exhibitions</a></li>
-                              <li><a href="visit.html">Visit Us</a></li>
-                              <li><a href="events.html">Events</a></li>
-                          </ul>
-                      </details>
-                  </li>
-              </ul>
-          </nav>
-
-      </header>
-
-      <div class="banner">
-        <div class="banner-inner">
-            <p class="banner-welcome">Welcome to the Community Science Museum</p>
-            <ul class="banner-info-list" aria-label="Museum information">
-              <li>Open Today: 10:00 - 16:00</li>
-              <li>Free General Admission</li>
-              <li class="banner-address">Science Center Blvd 1, Oslo</li>
+        <nav class="main-nav-mobile" aria-label="Mobile navigation">
+            <ul class="nav-list-mobile">
+                <li>
+                    <details class="mobile-dropdown">
+                        <summary>Women <i class="fa-solid fa-chevron-down"></i></summary>
+                        <ul class="mobile-sub-menu">
+                            <li><a href="exhibitions.html">Exhibitions</a></li>
+                            <li><a href="visit.html">Visit Us</a></li>
+                            <li><a href="events.html">Events</a></li>
+                        </ul>
+                    </details>
+                </li>
             </ul>
-            <a href="visit.html" class="ticket-btn-mobile">Ticket</a>
-        </div>
+        </nav>
+    </header>
+
+    <div class="banner">
+      <div class="banner-inner">
+          <p class="banner-welcome">Welcome to the Community Science Museum</p>
+          <ul class="banner-info-list" aria-label="Museum information">
+            <li>Open Today: 10:00 - 16:00</li>
+            <li>Free General Admission</li>
+            <li class="banner-address">Science Center Blvd 1, Oslo</li>
+          </ul>
+          <a href="visit.html" class="ticket-btn-mobile">Ticket</a>
+      </div>
     </div>
 
     <main id="main">
       <div class="container hero-container">
+        
         <div class="hero-content-cosmology">
           <h1>JOIN US IN THE COSMOS!</h1>
           <h2>--- Explore the origins of light and matter</h2>
-          <button class="cta-btn">The Night Sky</button>
-          <button class="cta-btn">Solar Exploration</button>
-          <button class="cta-btn">The Sky Above Us</button>
+          <button class="cta-btn night-sky">The Night Sky</button>
+          <button class="cta-btn solar-exploration">Solar Exploration</button>
+          <button class="cta-btn sky-above-us">The Sky Above Us</button>
         </div>
-        <div class="hero-image-cosmology">
-          <img src="images/project-images/cosmology-hero.jpg" alt="Cosmology exhibition image">
+
+        <a href="/exhibitions/cosmology" class="cosmology-widget" aria-label="Explore the Cosmology exhibition">
+          <div class="orbit inner-orbit" aria-hidden="true">
+            <span class="moon blue-moon"></span>
+          </div>
+          <div class="orbit outer-orbit" aria-hidden="true">
+            <span class="moon yellow-moon"></span>
+          </div>
+          <figure class="mars-center">
+            <h3 class="mars-text">Cosmology</h3>
+            <div class="mars-image-overlay" aria-hidden="true" role="img" aria-label="Illustration of an astronaut"></div>
+          </figure>
+        </a>
+      </div>
+
+      <div class="main-categories">
+        <h2>Main Categories</h2>
+        <button class="category-btn">Kids</button>
+        <button class="category-btn">Teachers</button>
+        <button class="category-btn">Researchers</button>
+      </div>
+
+      <div class="noticeboard">
+        <h2>Noticeboard</h2>
+        <a href="#" class="schedule-highlight">View todays schedule</a>
+        <div class="highlight-tile">
+          <h3>Energetica Exhibition</h3>
+          <p class="highlight-alert">New Arrival</p>
+          <a href="visit.html" class="ticket-btn">Ticket</a>
         </div>
       </div>
     </main>
