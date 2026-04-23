@@ -41,20 +41,11 @@
    ======================================== */
 
       body {
-      margin: 16px;
+      margin: 0;
       font-family: var(--font-body);
       color: var(--color-body);
       line-height: 1.6;
       background-color: var(--color-bkg);
-
-      @media (min-width: 450px) {
-         margin: 20px;
-      }
-
-      @media (min-width: 900px) {
-         margin: 80px;
-      }
-
 }
 
 /* ========================================

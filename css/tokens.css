@@ -95,7 +95,16 @@
     --header-icon-size: 1rem; /* Mobile icon size */
     --border-width: 1px;
 
+    /* Bauhaus divider widths — mobile-first */
+    --divider-major: 5px;  /* header bottom, footer top */
+    --divider-minor: 3px;  /* section dividers inside main */
 
+@media (min-width: 900px) {
+   :root {
+      --divider-major: 10px;
+      --divider-minor: 5px;
+   }
+}
   /* ========================================
      SHADOWS
      ======================================== */
@@ -121,4 +130,6 @@
 /* ========================================
 	DESKTOP OVERRIDES (900PX+)
    ======================================== */
+
+
 }

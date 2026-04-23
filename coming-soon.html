@@ -14,33 +14,84 @@
     <link rel="stylesheet" href="css/utilities.css">
   </head>
   <body>
-    <a class="skip-link" href="#main"></a>
+    <a class="skip-link" href="#main">Skip to main content</a>
 
     <div class="topbar">
-      <div class="topbar-inner">
-        <nav class="top-nav">
-          <ul></ul>
-        </nav>
-        <div class="country-select"></div>
-      </div>
+        <div class="topbar-inner">
+            <nav class="top-nav">
+                <ul>
+                    <li><a href="#">Login</a></li>
+                    <li><a href="#">Sign Up</a></li>
+                </ul>
+            </nav>
+            <div class="country-select">
+                <select id="topbar-country-select" name="country" aria-label="Select your country">
+                    <option value="">Country</option>
+                    <option value="norway">Norwegian</option>
+                    <option value="denmark">Danish</option>
+                    <option value="sweden">Swedish</option>
+                    <option value="england">English</option>
+                    <option value="germany">German</option>
+                </select>
+                <img src="images/stock-photos/pixabay-flag-norway.jpg" alt="Norway flag">
+            </div>
+        </div>
     </div>
 
     <header>
-      <div class="header-inner">
-        <a href="index.html" class="logo"></a>
+        <div class="header-inner">
+            <a href="index.html" class="logo">
+                <picture>
+                    <source media="(min-width: 900px)" srcset="images/project-images/SP1-logo-update.png">
+                    <img src="images/project-images/SP1-logo-update.png" alt="Museum of Science Logo">
+                </picture>
+            </a>
 
-        <nav class="main-nav" aria-label="Desktop navigation">
-          <ul class="nav-list"></ul>
+            <nav class="main-nav" aria-label="Desktop navigation">    
+                <ul class="nav-list">
+                    <li><a href="exhibitions.html">Exhibitions</a></li>
+                    <li><a href="visit.html">Visit Us</a></li>
+                    <li><a href="events.html">Events</a></li>
+                </ul>
+            </nav>
+
+            <div class="header-icons">
+                <label for="menu-toggle" class="menu-toggle-label icon-link">
+                    <i class="fa-solid fa-bars"></i>
+                    <span class="sr-only">Toggle navigation menu</span>
+                </label>
+              <a href="visit.html" class="ticket-btn">Ticket</a>
+            </div>
+        </div>
+
+        <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
+        <nav class="main-nav-mobile" aria-label="Mobile navigation">
+            <ul class="nav-list-mobile">
+                <li>
+                    <details class="mobile-dropdown">
+                        <summary>Women <i class="fa-solid fa-chevron-down"></i></summary>
+                        <ul class="mobile-sub-menu">
+                            <li><a href="exhibitions.html">Exhibitions</a></li>
+                            <li><a href="visit.html">Visit Us</a></li>
+                            <li><a href="events.html">Events</a></li>
+                        </ul>
+                    </details>
+                </li>
+            </ul>
         </nav>
-
-        <div class="header-icons"></div>
-      </div>
-
-      <input type="checkbox" id="menu-toggle" class="menu-toggle-checkbox">
-      <nav class="main-nav-mobile" aria-label="Mobile navigation">
-        <ul class="nav-list-mobile"></ul>
-      </nav>
     </header>
+
+    <div class="banner">
+      <div class="banner-inner">
+          <p class="banner-welcome">Welcome to the Community Science Museum</p>
+          <ul class="banner-info-list" aria-label="Museum information">
+            <li>Open Today: 10:00 - 16:00</li>
+            <li>Free General Admission</li>
+            <li class="banner-address">Science Center Blvd 1, Oslo</li>
+          </ul>
+          <a href="visit.html" class="ticket-btn-mobile">Ticket</a>
+      </div>
+    </div>
 
     <main id="main">
       <div class="container success-container">
