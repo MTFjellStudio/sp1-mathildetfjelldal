@@ -347,9 +347,97 @@
 	FOOTER
    ======================================== */
 
+   .footer-newsletter {
+      background-color: var(--color-yellow);
+      border-top: 3px solid var(--color-body);
+      border-bottom: 3px solid var(--color-body);
+   }
+
+   .footer-info {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center; /* Vertical alignment within each grid cell */
+      justify-items: center; /* Horizontal alignment within each grid cell */
+      
+   }
+
+   .footer-main {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+      place-items: center /* Shorthand for both at once, instead of either align-items or justify-items. */;
+   }
+
+   .footer-aside {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .footer-map {
+      border: 5px solid var(--color-body);
+      border-bottom: none;
+   }
+
+   .footer-social {
+      background-color: var(--color-red);
+      border-top: 5px solid var(--color-body);
+      border-bottom: 5px solid var(--color-body);
+      color: var(--color-bkg);
+   }
+
+   .footer-social ul {
+      display: flex;
+      flex-direction: row;
+      gap: var(--space-md);
+   }
+
+   .blue-divider {
+      background-color: var(--color-blue);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .blue-divider img {
+      display: block;
+      margin: 0 auto;
+      padding: var(--space-lg) 0;
+      height: auto;
+      width: 150px;
+   }
+
+
+   @media (min-width: 900px) {
+
+      .footer-info {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-main {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         gap: var(--space-lg);
+      }
+   }
+
 /* ========================================
 	BOTTOMBAR
    ======================================== */
+
+   .bottombar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--color-body);
+      color: var(--color-bkg);
+   }
+
+   .bottom-nav ul {
+      display: flex;
+      flex-direction: row;
+   }
 
 /* ========================================
 	MAIN CATEGORIES GRID (HOMEPAGE)

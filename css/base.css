@@ -36,6 +36,13 @@
       font-size: var(--font-size-h4);
    }
 
+   @media (min-width: 900px) {
+      h1 { font-size: var(--font-size-h1-desktop); }
+      h2 { font-size: var(--font-size-h2-desktop); }
+      h3 { font-size: var(--font-size-h3-desktop); }
+      h4 { font-size: var(--font-size-h4-desktop); }
+   }
+
 /* ========================================
 	BODY - Margin moved from layout.css
    ======================================== */
