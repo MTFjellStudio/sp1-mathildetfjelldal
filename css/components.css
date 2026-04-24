@@ -160,12 +160,20 @@
 }
 
 /* ========================================
-	GREEN INFORMATION BUTTON / DROPDOWN WITH A + SIGN
+	HIGHLIGHT TILES
    ======================================== */
 
+   .highlight-tile {
+      border: 5px solid var(--color-body);
+   }
+
 /* ========================================
-	SORT AND FILTER TOOLBAR
+	NEWS TILES
    ======================================== */
+
+   .news-tile {
+      border: 5px solid var(--color-body);
+   }
 
 /* ========================================
 	PRODUCT CARDS
