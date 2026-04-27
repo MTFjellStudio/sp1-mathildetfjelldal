@@ -140,6 +140,10 @@
       display: none;
    }
 
+   /* ========================================
+	Mobile Hamburger Menu (Hidden on Desktop)
+   ======================================== */
+
    .menu-toggle-checkbox {
       display: none;
    }
@@ -147,6 +151,37 @@
    .main-nav-mobile {
       display: none;
       padding: 0 var(--space-lg) var(--space-md);
+   }
+
+   .menu-toggle-label {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      padding: var(--space-xs);
+      font-size: 1.5rem;
+      color: var(--color-body);
+   }
+
+   .main-nav-mobile .nav-list-mobile {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-xs);
+      margin: 0;
+      padding: var(--space-sm) 0 0;
+   }
+
+   .main-nav-mobile .nav-list-mobile a {
+      display: block;
+      padding: var(--space-sm) 0;
+      text-decoration: none;
+      font-family: var(--font-heading);
+      font-size: var(--font-size-h4);
+      border-top: 2px solid var(--color-body);
+   }
+
+   .main-nav-mobile .nav-list-mobile li:last-child a {
+      border-bottom: 2px solid var(--color-body);
    }
 
    .menu-toggle-checkbox:checked + .main-nav-mobile {
@@ -160,10 +195,6 @@
    }
    
    @media (min-width: 450px) {
-      .header-inner {
-         
-      }
-
       .logo img {
          height: 100px;
          width: auto;
