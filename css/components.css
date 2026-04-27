@@ -176,39 +176,118 @@
    }
 
 /* ========================================
-	PRODUCT CARDS
+	EXHIBITION CARDS
    ======================================== */
+
+   .visual-container {
+      position: relative;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 250px;
+      margin-bottom: var(--space-md);
+   }
+
+   .shape-image-overlay {
+      position: absolute;
+      width: 160px;
+      height: 160px;
+      opacity: 0;
+      transform: scale(0.96);
+      transition: opacity 0.35s ease, transform 0.35s ease;
+      background-image: var(--tile-image);
+      background-size: cover;
+      background-position: center;
+      z-index: 1;
+      pointer-events: none;
+   }
+
+   /* Base shape styles */
+   .colored-shape {
+      width: 160px;
+      height: 160px;
+   }
+
+   .shape-circle {
+      border-radius: 50%;
+   }
+
+   .shape-square {
+      border-radius: 0;
+   }
+
+   .shape-image-overlay.shape-circle {
+      border-radius: 50%;
+   }
+
+   .shape-image-overlay.shape-square {
+      border-radius: 0;
+   }
+
+   .shape-image-overlay.shape-triangle-mask {
+      clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+   }
+
+   /* CSS Triangles loophole solution? */
+   .shape-triangle {
+      width: 0;
+      height: 0;
+      background-color: transparent !important;
+      border-left: 90px solid transparent;
+      border-right: 90px solid transparent;
+   }
+
+   /* Shape Colors - Circles and Squares */
+   .red-shape { 
+      background-color: var(--color-red); 
+   }
+
+   .blue-shape, .blue-dark-shape { 
+      background-color: var(--color-blue); 
+   }
+
+   .yellow-shape, .yellow-light-shape {
+      background-color: var(--color-yellow); 
+   }
+
+   /* Triangle Colors */
+   .shape-triangle.yellow-shape { 
+      border-bottom: 160px solid var(--color-yellow); 
+   }
+
+   .shape-triangle.red-dark-shape { 
+      border-bottom: 160px solid var(--color-red); 
+   }
+
+   .visual-container:hover .shape-image-overlay,
+   .visual-container:focus-within .shape-image-overlay {
+      opacity: 1;
+      transform: scale(1);
+   }
+
+   /* This is the overlapping text box. But the position is a bit tricky as it doesnt work well for different shapes. It needs to be to the bottom-right on the shape, but also overlap it. */
+   .name-box {
+      position: absolute;
+      bottom: 60px;       /* Pushes it toward the bottom of the container */
+      right: 50%;         /* Starts at the center */
+      transform: translateX(110%); /* Pushes it off-center to the right to overlap the shape */
+      
+      background-color: var(--color-bkg);
+      border: 3px solid var(--color-body);
+      width: fit-content;
+      padding: 0 0.5rem;
+      z-index: 2; /* This is to ensure it appears above the shapes, "bring to front" if you will. */
+   }
+
+   .name-box h3 {
+      margin: 0;
+      line-height: 1.7;
+   }
+
+
 
 /* ========================================
 	FEATURED CATEGORY CARD
-   ======================================== */
-
-/* ========================================
-	PRODUCT FORMS & INPUTS
-   ======================================== */
-
-/* ========================================
-	COLOR SELECTOR (CIRCLES)
-   ======================================== */
-
-/* ========================================
-	SIZE SELECTOR (BOXES)
-   ======================================== */
-
-/* ========================================
-	QUANTITY & ACTIONS
-   ======================================== */
-
-/* ========================================
-	REVIEW CARDS
-   ======================================== */
-
-/* ========================================
-	CART COMPONENT
-   ======================================== */
-
-/* ========================================
-	PROGRESS BAR
    ======================================== */
 
 /* ========================================

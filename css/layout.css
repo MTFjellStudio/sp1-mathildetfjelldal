@@ -485,6 +485,68 @@
 	EXHIBITIONS GRID LAYOUT
    ======================================== */
 
+   .page-intro {
+      text-align: left;
+      max-width: 800px;
+      padding: var(--space-lg) 0;
+      margin: 0 auto;
+   }
+
+   .page-intro h1 {
+      font-size: 2.5rem;
+      margin: 0;
+   }
+
+   ul.exhibitions-list {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+   }
+
+   .exhibition-item {
+      padding: var(--space-lg) var(--space-md);
+      border-bottom: var(--border-heavy); /* The divider for mobile. Divider/border on outer container? I have used border for the main page, the type should be consistent. */
+   }
+
+   /* Center the text content on mobile/default layout */
+   .content-container {
+      text-align: center;
+      max-width: 400px;
+      margin: 0 auto;
+   }
+
+   @media (min-width: 900px) {
+  
+  .breadcrumbs, .page-intro p {
+      display: block;
+   }
+
+   /* The Grid Setup */
+   ul.exhibitions-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+   }
+
+   .exhibition-item {
+      /* Draw right and bottom borders on every item */
+      border-right: var(--border-heavy);
+      border-bottom: var(--border-heavy);
+      padding: var(--space-lg);
+   }
+
+   .content-container {
+      text-align: left;
+   }
+
+   /* Adjust the name-box offset for larger screens if necessary */
+   .name-box {
+      transform: translateX(80%); 
+   }
+}
+
+
 /* ========================================
 	COSMOLOGY EXHIBITION LAYOUT
    ======================================== */

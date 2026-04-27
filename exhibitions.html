@@ -93,45 +93,216 @@
       </div>
     </div>
 
-    <main id="main">
-      <div class="container">
-        <div class="page-header">
-          <div class="breadcrumbs"></div>
-          <h1>Exhibitions</h1>
-          <p class="product-count">Explore all exhibition spaces at Community Science Museum.</p>
-          <div class="toolbar">
-            <div class="dropdown-item filter-dropdown"></div>
-            <div class="dropdown-item sort-dropdown"></div>
-          </div>
-        </div>
+    <main class="container">
+        <nav class="breadcrumbs">
+            <a href="index.html">Home</a> / Exhibitions
+        </nav>
 
-        <section class="product-grid">
-          <h2 class="sr-only">Exhibition overview</h2>
-          <article class="product-card"></article>
-        </section>
-      </div>
+        <header class="page-intro">
+            <h1>Exhibition Spaces</h1>
+            <p>We believe science should not be confined to the textbook, but brought to life through exhibits. Discover over 1000 different interactive exhibits across our varied subjects.</p>
+        </header>
+        
+        <hr class="mobile-divider">
+
+        <ul class="exhibitions-list">
+            <li class="exhibition-item">
+                <article>
+                    <div class="visual-container">
+                        <div class="colored-shape shape-circle red-shape"></div>
+                        <div class="shape-image-overlay shape-circle" style="--tile-image: url('images/stock-photos/pixabay-flag-norway.jpg');" aria-hidden="true"></div>
+                        <div class="name-box">
+                            <h3>Cosmology</h3>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <p>Explore the wonders of our cosmos. Our fantastic exhibition, ‘The Sky Above Us’, explores the night sky and what we can see and know about the universe around us.</p>
+                    </div>
+                </article>
+            </li>
+
+            <li class="exhibition-item">
+                <article>
+                    <div class="visual-container">
+                        <div class="colored-shape shape-triangle yellow-shape"></div>
+                        <div class="shape-image-overlay shape-triangle-mask" style="--tile-image: url('images/stock-photos/pixabay-flag-norway.jpg');" aria-hidden="true"></div>
+                        <div class="name-box">
+                            <h3>Evolution</h3>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <p>Travel back in time and meet our resident Woolly Mammoth. Discover how life has adapted and changed over millions of years of Earth's history.</p>
+                    </div>
+                </article>
+            </li>
+
+            <li class="exhibition-item">
+                <article>
+                    <div class="visual-container">
+                        <div class="colored-shape shape-square blue-shape"></div>
+                        <div class="shape-image-overlay shape-square" style="--tile-image: url('images/stock-photos/pixabay-flag-norway.jpg');" aria-hidden="true"></div>
+                        <div class="name-box">
+                            <h3>Robotics & AI</h3>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <p>Step into the information revolution! Discover how robotics and artificial intelligence are shaping the future, and even shake hands with Rob the Robot.</p>
+                    </div>
+                </article>
+            </li>
+
+            <li class="exhibition-item">
+                <article>
+                    <div class="visual-container">
+                        <div class="colored-shape shape-circle blue-dark-shape"></div>
+                        <div class="shape-image-overlay shape-circle" style="--tile-image: url('images/stock-photos/pixabay-flag-norway.jpg');" aria-hidden="true"></div>
+                        <div class="name-box">
+                            <h3>Biology & Medicine</h3>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <p>From the smallest cells to the largest mammals, explore the very building blocks of life itself in our highly interactive biology wing.</p>
+                    </div>
+                </article>
+            </li>
+
+            <li class="exhibition-item">
+                <article>
+                    <div class="visual-container">
+                        <div class="colored-shape shape-triangle red-dark-shape"></div>
+                        <div class="shape-image-overlay shape-triangle-mask" style="--tile-image: url('images/stock-photos/pixabay-flag-norway.jpg');" aria-hidden="true"></div>
+                        <div class="name-box">
+                            <h3>Ecology</h3>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <p>Explore how to create a sustainable future for the whole planet. Unpack the dangers of global warming while discovering positive ways we can all contribute.</p>
+                    </div>
+                </article>
+            </li>
+
+            <li class="exhibition-item">
+                <article>
+                    <div class="visual-container">
+                        <div class="colored-shape shape-square yellow-light-shape"></div>
+                        <div class="shape-image-overlay shape-square" style="--tile-image: url('images/stock-photos/pixabay-flag-norway.jpg');" aria-hidden="true"></div>
+                        <div class="name-box">
+                            <h3>Temporary Exhibits</h3>
+                        </div>
+                    </div>
+                    <div class="content-container">
+                        <h3>Energetica</h3>
+                        <p>Experience the power of the elements! On loan from Amsterdam, this special installation lets you harness solar energy and wind turbines to create power.</p>
+                    </div>
+                </article>
+            </li>
+        </ul>
     </main>
 
     <footer>
       <div class="footer-inner">
-        <div class="footer-newsletter"></div>
+          <div class="footer-newsletter">
+            <h2 class="container">Stay Curious</h2>
+            <p class="container">Sign up for our newsletter to get the latest updates on new exhibitions, special events, and holiday clubs.</p>
 
-        <nav class="footer-nav" aria-label="Footer navigation">
-          <ul></ul>
-        </nav>
+            <form action="#" class="container newsletter-form">
+              <label for="newsletter-email" class="sr-only">Email address</label>
+                <div class="form-group">
+                  <input type="email" id="newsletter-email" placeholder="Enter your email" required>
+                  <button type="submit" class="btn btn-narrow">Subscribe</button>
+                </div>
+            </form>  
+            <p class="container legal-text">
+                By joining you agree to our <a href="#">Terms</a> and <a href="#">Privacy Policy</a>.
+            </p>
+          </div>
 
-        <div class="footer-icons"></div>
+          <div class="footer-main">
+            <div class="container footer-info">
 
-        <a href="index.html" class="logo-footer"></a>
+              <section>
+                <h2>Find Us</h2>
+                <address>
+                  Community Science Museum<br>
+                  Tuborg Havnevej<br>
+                  2900 Hellerup
+                </address>
+              </section>
+
+              <section>
+                <h2>Contact Us</h2>
+                <address>
+                  + 45 39 27 33 33 <br>
+                  info@experimentarium.dk
+                </address>
+              </section>
+
+              <section>
+                <h2>Open Hours</h2>
+                <p> Mon: Closed <br>
+                  Tue–Thu: 10:00 – 16:00 <br>
+                  Fri: 10:00 – 19:00 <br>
+                  Sat: 09:00 – 16:00 <br>
+                  Sun: 09:00 – 13:00 </p>
+              </section>
+
+              <section>
+                <h2>Explore</h2>
+                <nav class="footer-nav" aria-label="Footer navigation">
+                  <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="exhibitions.html">Exhibitions</a></li>
+                    <li><a href="events.html">Events &amp; Community</a></li>
+                    <li><a href="visit.html">Visit Us</a></li>
+                  </ul>
+                </nav>
+              </section>
+
+              <section>
+                <h2>Get Involved</h2>
+                <ul>
+                  <li><a href="coming-soon.html">Contact</a></li>
+                  <li><a href="coming-soon.html">Newsletter</a></li>
+                  <li><a href="coming-soon.html">Donate</a></li>
+                </ul>
+              </section>
+            </div>
+
+            <div class="footer-aside">
+              <section class="footer-map">
+                <iframe title="Map showing the location of the Community Science Museum at Tuborg Havnevej 7, 2900 Hellerup, Denmark" src="https://www.google.com/maps?q=Experimentarium,+Tuborg+Havnevej+7,+2900+Hellerup,+Denmark&output=embed" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+              </section>
+              <section class="footer-social">
+                <h2 class="container">Join us on social media!</h2>
+                <ul class="container">
+                  <li><a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
+                  <li><a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
+                  <li><a href="#" aria-label="Google"><i class="fa-brands fa-google"></i></a></li>
+                  <li><a href="#" aria-label="Twitter / X"><i class="fa-brands fa-x-twitter"></i></a></li>
+                </ul>
+              </section>
+            </div>
+          </div>
+      </div>
+      <div class="blue-divider">
+        <img src="images/project-images/SP1-logo-update.png" alt="Community Science Museum logo" class="footer-logo">
+        <img src="#" alt="Noroff logo" class="noroff-logo">
       </div>
     </footer>
 
     <div class="bottombar">
       <div class="bottombar-inner">
+        
+        <p>© 2026 Community Science Museum. All Rights Reserved.</p>
+        
         <nav class="bottom-nav">
-          <ul></ul>
+          <ul>
+            <li><a href="coming-soon.html">Privacy Policy</a></li>
+            <li><a href="coming-soon.html">Accessibility Statement</a></li>
+            <li><a href="coming-soon.html">Cookie Preferences</a></li>
+          </ul>
         </nav>
-        <div class="country-select"></div>
+
       </div>
     </div>
   </body>
