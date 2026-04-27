@@ -342,6 +342,10 @@
       order: -1;
    }
 
+   .hero-split-divider {
+      display: none;
+   }
+
    @media (min-width: 900px) {
       .hero-container {
          display: flex; /* or display: grid? */
@@ -365,12 +369,13 @@
       }
 
       .hero-visual-column {
-         /* Desktop: vertical border */
-         border-top: none;
-         border-left: var(--divider-major) solid var(--color-body);
          padding: var(--space-lg);
          flex: 1; /* Allows the column to take up the right half */
          order: 0;
+      }
+
+      .hero-split-divider {
+         display: block;
       }
    }
 

@@ -11,5 +11,36 @@
    ======================================== */
 
 /* ========================================
+    DIVIDERS
+   ======================================== */
+
+    .horizontal-divider,
+    .horisontal-divider,
+    .divider,
+    .mobile-divider {
+        border: 0;
+        border-top: var(--divider-minor) solid var(--color-body);
+        margin: 0;
+        width: 100%;
+    }
+
+    .vertical-divider {
+        display: none;
+        align-self: stretch;
+        border: 0;
+        border-left: var(--divider-major) solid var(--color-body);
+    }
+
+    @media (min-width: 900px) {
+        .vertical-divider {
+            display: block;
+        }
+
+        .mobile-divider {
+            display: none;
+        }
+    }
+
+/* ========================================
     TEXT
    ======================================== */
