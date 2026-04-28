@@ -23,6 +23,50 @@
 }
 
 /* ========================================
+   UNIVERSAL GRID LAYOUTS
+   ======================================== */
+
+   /* Mobile-First: All grids default to 1 column stacking */
+   .grid-1-col,
+   .grid-2-col,
+   .grid-3-col {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+   }
+
+   .grid-1-col > *:not(:last-child),
+   .grid-2-col > *:not(:last-child),
+   .grid-3-col > *:not(:last-child) {
+      border-bottom: var(--divider-major) solid var(--color-body);
+      padding-bottom: var(--space-lg);
+   }
+
+   @media (min-width: 900px) {
+      
+      .grid-2-col {
+         grid-template-columns: repeat(2, 1fr);
+      }
+
+      .grid-3-col {
+         grid-template-columns: repeat(3, 1fr);
+      }
+
+      .grid-2-col > *:not(:last-child),
+      .grid-3-col > *:not(:last-child) {
+         border-bottom: none;
+         padding-bottom: 0;
+         border-right: var(--divider-major) solid var(--color-body);
+         padding-right: var(--space-lg);
+      }
+
+      .grid-2-col > *:not(:first-child),
+      .grid-3-col > *:not(:first-child) {
+         padding-left: var(--space-lg);
+      }
+   }
+
+/* ========================================
 	TOPBAR (DESKTOP-ONLY: LOGIN, BLOG, SUPPORT, COUNTRY)
    ======================================== */
 
@@ -491,6 +535,12 @@
       padding: var(--space-lg);
    }
 
+   .main-categories ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+   }
+
    @media (min-width: 900px) {
       .main-categories {
          display: flex;
@@ -542,8 +592,6 @@
       list-style: none;
       padding: 0;
       margin: 0;
-      display: flex;
-      flex-direction: column;
    }
 
    .exhibition-item {
