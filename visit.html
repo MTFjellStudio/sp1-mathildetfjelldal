@@ -78,8 +78,8 @@
       <div class="banner-inner">
           <p class="banner-welcome">Welcome to the Community Science Museum</p>
           <ul class="banner-info-list" aria-label="Museum information">
-            <li>Open Today: 10:00 - 16:00</li>
-            <li>Free General Admission</li>
+            <li class="banner-time">Open Today: 10:00 - 16:00</li>
+            <li class="banner-admission">Free General Admission</li>
             <li class="banner-address">Science Center Blvd 1, Oslo</li>
           </ul>
           <a href="visit.html" class="ticket-btn-mobile">Ticket</a>
@@ -88,8 +88,8 @@
 
     <main id="main">
       
-      <section class="page-title-section visit-title-section">
-        <div class="container page-title-grid">
+      <section class="page-title">
+        <div class="container page-grid">
           <div class="page-title-text">
             <nav class="breadcrumbs" aria-label="Breadcrumb">
               <a href="index.html">Home</a> / <span aria-current="page">Visit Us</span>
@@ -97,22 +97,18 @@
             <h1>Plan Your Visit</h1>
             <p>We are excited to welcome you to the Community Science Museum. Whether you are exploring the cosmos or traveling back in time, here is everything you need to know to plan a comfortable and inspiring day with us.</p>
           </div>
-          <div class="hero-visual">
-            <img src="images/project-images/vr-headset-illustration.png" alt="Illustration of a person wearing a VR headset" class="hero-illustration">
+          <div class="page-visual">
+            <img src="images/project-images/vr-no-bkg-compressed.png" alt="Illustration of a person wearing a VR headset" class="hero-illustration">
           </div>
         </div>
       </section>
 
-      <section class="getting-here-section border-bottom-heavy">
-        <header class="section-header bg-dark-blue text-white border-bottom-heavy">
-          <div class="container">
+      <section class="getting-here">
+        <header class="sub-header">
             <h2>Getting Here</h2>
-          </div>
         </header>
-
-        <div class="container split-layout-asymmetrical">
-          
-          <div class="transit-info bg-off-white divider-mobile-b-desktop-r">
+        <div class="location-info">
+          <div class="container transit-info">
             <div class="info-block">
               <h3>Public Transit</h3>
               <p>The museum is easily accessible by public transportation. Bus lines 12, 45, and 72 stop directly outside the main entrance at the "Science Center" stop.</p>
@@ -127,10 +123,10 @@
           </div>
 
           <div class="location-visuals">
-            <div class="map-container border-bottom-heavy">
+            <div class="map-container">
               <iframe title="Map showing the location of the museum" src="https://www.google.com/maps/embed?..." width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
             </div>
-            <div class="address-box bg-red text-white">
+            <div class="address-box">
               <h3>Address</h3>
               <address>
                 Community Science Museum<br>
@@ -139,54 +135,56 @@
               </address>
             </div>
           </div>
-
         </div>
       </section>
 
-      <div class="twin-columns-wrapper border-bottom-heavy">
-        
-        <section class="accessibility-section divider-mobile-b-desktop-r">
-          <h2 class="section-header bg-dark-blue text-white border-bottom-heavy">Accessibility</h2>
-          <div class="section-content bg-off-white">
-            <div class="text-content">
-              <p>The museum has been architecturally designed to ensure universal access and a seamless experience for all visitors.</p>
-              <p>Our entire building is fully wheelchair accessible, with wide, spacious corridors and ramps.</p>
-              <p><strong>Elevators</strong> are conveniently located on every floor.</p>
-              <p>Sensory-friendly hours, featuring reduced noise and dimmed lighting, are available every Tuesday morning from 10:00 to 12:00.</p>
+        <section class="accessibility">
+          <header class="sub-header">
+            <h2>Accessibility</h2>
+          </header>
+          <div class="container location-info">
+            <div class="transit-info">
+              <div class="info-block">
+                <p>The museum has been architecturally designed to ensure universal access and a seamless experience for all visitors.</p>
+                <p>Our entire building is fully wheelchair accessible, with wide, spacious corridors and ramps.</p>
+                <p><strong>Elevators</strong> are conveniently located on every floor.</p>
+                <p>Sensory-friendly hours, featuring reduced noise and dimmed lighting, are available every Tuesday morning from 10:00 to 12:00.</p>
+              </div>
             </div>
             <div class="illustration-content">
-               <img src="images/project-images/wheelchair-illustration.png" alt="Illustration of a person in a wheelchair" class="inline-illustration">
+               <img src="images/project-images/accessibility-no-bkg-compressed.png" alt="Illustration of a person in a wheelchair" class="inline-illustration">
             </div>
           </div>
         </section>
 
-        <section class="admission-section bg-off-white">
-          <h2 class="section-header bg-dark-blue text-white border-bottom-heavy">Admission</h2>
-          <div class="section-content">
-            <p>We believe science should be accessible to everyone, which is why general admission to our permanent exhibits is <strong>completely free!</strong></p>
-            <p>There are guided tours of the museum that leave every hour. These tours are 70 NOK per person and include a handy printed guide of the museum.</p>
-            <p>If you would like to organize a guided tour for your group of 6 or more people, please contact us to arrange the tour.</p>
+        <section class="admission">
+          <header class="sub-header">
+            <h2>Admission</h2>
+          </header>
+          <div class="container location-info">
+            <div class="transit-info">
+              <div class="info-block">
+                <p>We believe science should be accessible to everyone, which is why general admission to our permanent exhibits is <strong>completely free!</strong></p>
+                <p>There are guided tours of the museum that leave every hour. These tours are 70 NOK per person and include a handy printed guide of the museum.</p>
+                <p>If you would like to organize a guided tour for your group of 6 or more people, please contact us to arrange the tour.</p>
+              </div>
+            </div>
           </div>
         </section>
 
-      </div>
-
-      <section class="amenities-section bg-off-white">
-        <header class="section-header bg-dark-blue text-white border-bottom-heavy">
-          <div class="container">
-            <h2>Museum Amenities</h2>
-          </div>
-        </header>
-
-        <div class="container grid-3-col amenities-grid">
+      <section class="amenities">
+          <header class="sub-header">
+            <h2>Amenities</h2>
+          </header>
+          <div class="container amenities-grid">
           
-          <article class="amenity-item divider-mobile-b-desktop-r">
+          <article class="amenity-item">
             <h3>Food & Drink</h3>
             <p>Recharge at the Science Café, located on the ground floor, offering a selection of warm meals, light snacks, and beverages.</p>
             <p>If you prefer to bring your own food, you are warmly invited to use our designated indoor and outdoor picnic areas.</p>
           </article>
 
-          <article class="amenity-item divider-mobile-b-desktop-r">
+          <article class="amenity-item">
             <h3>The Museum Shop</h3>
             <p>Don't forget to stop by the visual life of the strange of memorabilia from the museum, as well as great gifts and activity packs that allow you to continue to explore science even after you've left the museum.</p>
             <a href="shop.html" class="text-link font-bold">Shop Info Page</a>
