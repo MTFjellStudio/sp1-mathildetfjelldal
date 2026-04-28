@@ -100,6 +100,15 @@
       text-decoration: none;
    }
 
+   .readmore-btn {
+      display: inline-block;
+      padding: 0.5rem 1.5rem;
+      text-decoration: none;
+      background: var(--color-yellow);
+      color: var(--color-body);
+      box-shadow: 8px 8px 0 var(--color-body);
+   }
+
 /* ========================================
 	COSMOLOGY WIDGET - Hero Visual on Homepage
    ======================================== */
