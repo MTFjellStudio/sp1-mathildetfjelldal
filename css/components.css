@@ -95,9 +95,40 @@
       display: inline-block;
       background-color: var(--color-bkg);
       color: var(--color-body);
-      border: 2px solid var(--color-body);
       padding: 1rem 3rem;
+      font-size: var(--font-size-h3);
       text-decoration: none;
+      font-weight: var(--font-weight-bold);
+      text-align: center;
+      width: 100%;
+      padding: var(--space-xl) 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .category-btn.category-kids:hover {
+      background-image: url("../images/project-images/kids-bkg-compressed.jpg");
+      background-size: cover;
+      background-position: center;
+   }
+
+   .category-btn.category-teachers:hover {
+      background-image: url("../images/project-images/professor-bkg-compressed.jpg");
+      background-size: cover;
+      background-position: center;
+   }
+
+   .category-btn.category-researchers:hover {
+      background-image: url("../images/project-images/scientist-bkg-compressed.jpg");
+      background-size: cover;
+      background-position: center;
+   }
+
+   @media (min-width: 900px) {
+      .category-btn {
+         min-height: 150px;
+      }
    }
 
    .readmore-btn {
