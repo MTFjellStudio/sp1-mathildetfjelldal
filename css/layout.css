@@ -23,48 +23,27 @@
 }
 
 /* ========================================
-   UNIVERSAL GRID LAYOUTS - This is messy, fix or remove.
+   UNIVERSAL GRID LAYOUTS
    ======================================== */
 
-   /* Mobile-First: All grids default to 1 column stacking */
-   .grid-1-col,
-   .grid-2-col,
    .grid-3-col {
       display: grid;
       grid-template-columns: 1fr;
       gap: var(--space-lg);
    }
 
-   .grid-1-col > *:not(:last-child),
-   .grid-2-col > *:not(:last-child),
-   .grid-3-col > *:not(:last-child) {
-      border-bottom: var(--divider-major) solid var(--color-body);
-      padding-bottom: var(--space-lg);
-   }
-
    @media (min-width: 900px) {
-      
-      .grid-2-col {
-         grid-template-columns: repeat(2, 1fr);
-      }
-
       .grid-3-col {
-         grid-template-columns: repeat(3, 1fr);
-      }
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+         }
+   }
 
-      .grid-2-col > *:not(:last-child),
-      .grid-3-col > *:not(:last-child) {
-         border-bottom: none;
-         padding-bottom: 0;
-         border-right: var(--divider-major) solid var(--color-body);
-         padding-right: var(--space-lg);
-      }
-
-      .grid-2-col > *:not(:first-child),
-      .grid-3-col > *:not(:first-child) {
-         padding-left: var(--space-lg);
+   @media (min-width: 450px) and (max-width: 899px) {
+      .grid-3-col.tablet-2 {
+         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
    }
+
 
 /* ========================================
 	TOPBAR (DESKTOP-ONLY: LOGIN, BLOG, SUPPORT, COUNTRY)
@@ -429,102 +408,6 @@
    }
 
 /* ========================================
-	FOOTER
-   ======================================== */
-
-   .footer-newsletter {
-      background-color: var(--color-yellow);
-      border-top: 3px solid var(--color-body);
-      border-bottom: 3px solid var(--color-body);
-   }
-
-   .footer-info {
-      display: grid;
-      grid-template-columns: 1fr;
-      align-items: center; /* Vertical alignment within each grid cell */
-      justify-items: center; /* Horizontal alignment within each grid cell */
-      
-   }
-
-   .footer-main {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-md);
-      place-items: center /* Shorthand for both at once, instead of either align-items or justify-items. */;
-   }
-
-   .footer-aside {
-      display: flex;
-      flex-direction: column;
-   }
-
-   .footer-map {
-      border: 5px solid var(--color-body);
-      border-bottom: none;
-   }
-
-   .footer-social {
-      background-color: var(--color-red);
-      border-top: 5px solid var(--color-body);
-      border-bottom: 5px solid var(--color-body);
-      color: var(--color-bkg);
-   }
-
-   .footer-social ul {
-      display: flex;
-      flex-direction: row;
-      gap: var(--space-md);
-   }
-
-   .blue-divider {
-      background-color: var(--color-blue);
-      width: 100%;
-      display: flex;
-      justify-content: space-between;
-   }
-
-   .blue-divider img {
-      display: block;
-      margin: 0 auto;
-      padding: var(--space-lg) 0;
-      height: auto;
-      width: 150px;
-   }
-
-
-   @media (min-width: 900px) {
-
-      .footer-info {
-         display: grid;
-         grid-template-columns: 1fr 1fr;
-      }
-
-      .footer-main {
-         display: flex;
-         flex-direction: row;
-         justify-content: space-between;
-         gap: var(--space-lg);
-      }
-   }
-
-/* ========================================
-	BOTTOMBAR
-   ======================================== */
-
-   .bottombar-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background-color: var(--color-body);
-      color: var(--color-bkg);
-   }
-
-   .bottom-nav ul {
-      display: flex;
-      flex-direction: row;
-   }
-
-/* ========================================
 	MAIN CATEGORIES GRID (HOMEPAGE)
    ======================================== */
    .main-categories {
@@ -751,6 +634,12 @@
       grid-template-columns: 1fr;
    }
 
+   .holiday-club .info-panel {
+      padding: var(--space-md);
+      align-items: center;
+      justify-content: center;
+   }
+
    .media-panel {
       width: 100%;
    }
@@ -791,3 +680,129 @@
 /* ========================================
 	COMING SOON PAGE LAYOUT
    ======================================== */
+
+   /* ========================================
+	FOOTER
+   ======================================== */
+
+
+   .footer-newsletter {
+      background-color: var(--color-yellow);
+      border-top: var(--divider-major) solid var(--color-body);
+      border-bottom: 3px solid var(--color-body);
+   }
+
+   .newsletter-inner {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+      padding: var(--space-lg) 0;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .newsletter-text {
+      text-align: left;
+      max-width: 500px;
+      font-size: var(--font-size-md);
+      font-weight: var(--font-weight-bold);
+   }
+
+   .legal-text {
+      font-size: var(--font-size-sm);
+      color: var(--color-blue);
+   }
+
+   @media (min-width: 900px) {
+   .newsletter-inner {
+         flex-direction: row;
+         align-items: center;
+         justify-content: space-between; 
+      }
+   }
+
+   .footer-main {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-md);
+      place-items: center /* Shorthand for both at once, instead of either align-items or justify-items. */;
+   }
+
+   .footer-info {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center; /* Vertical alignment within each grid cell */
+      justify-items: center; /* Horizontal alignment within each grid cell */
+      
+   }
+
+   .footer-aside {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .footer-map {
+      border: 5px solid var(--color-body);
+      border-bottom: none;
+   }
+
+   .footer-social {
+      background-color: var(--color-red);
+      border-top: 5px solid var(--color-body);
+      border-bottom: 5px solid var(--color-body);
+      color: var(--color-bkg);
+   }
+
+   .footer-social ul {
+      display: flex;
+      flex-direction: row;
+      gap: var(--space-md);
+   }
+
+   .blue-divider {
+      background-color: var(--color-blue);
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+   }
+
+   .blue-divider img {
+      display: block;
+      margin: 0 auto;
+      padding: var(--space-lg) 0;
+      height: auto;
+      width: 150px;
+   }
+
+
+   @media (min-width: 900px) {
+
+      .footer-main {
+         display: flex;
+         flex-direction: row;
+         justify-content: space-between;
+         gap: var(--space-lg);
+      }
+
+      .footer-info {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+      }
+   }
+
+/* ========================================
+	BOTTOMBAR
+   ======================================== */
+
+   .bottombar-inner {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: var(--color-body);
+      color: var(--color-bkg);
+   }
+
+   .bottom-nav ul {
+      display: flex;
+      flex-direction: row;
+   }

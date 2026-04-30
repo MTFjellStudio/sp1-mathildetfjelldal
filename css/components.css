@@ -109,6 +109,42 @@
       box-shadow: 8px 8px 0 var(--color-body);
    }
 
+   /* Newsletter form buttons */
+   .newsletter-form .form-group {
+      display: flex;
+      gap: 1rem; /* Space between input and button for the shadow */
+      flex-wrap: wrap; /* Allows wrapping on smaller screens, otherwise horizontal scrollbar appears. */
+   }
+
+   .newsletter-form input {
+      height: 3rem; /* Fixed, larger height */
+      padding: 0 1rem;
+      border: var(--divider-minor) solid var(--color-body);
+      background-color: var(--color-bkg);
+      color: var(--color-body);
+      font-size: var(--font-size-md);
+   }
+
+   .newsletter-form button {
+      height: 3rem; /* Matches input height, so that the button and input align better */
+      padding: 0 2rem;
+      background-color: var(--color-body);
+      color: var(--color-bkg);
+      border: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 8px 8px 0 var(--color-red); /* Retro red 2D shadow */
+      transition: transform 0.1s, box-shadow 0.1s;
+   }
+
+   .newsletter-form button:hover {
+      background-color: var(--color-blue);
+      box-shadow: 4px 4px 0 var(--color-body);
+      transform: translate(4px, 4px); /* Creates a "pressed" clicking effect, I would prefer to choose between this one and the yellow normal hover effect but not have both. */
+   }
+
+
 /* ========================================
 	COSMOLOGY WIDGET - Hero Visual on Homepage
    ======================================== */
