@@ -151,8 +151,8 @@
 .hero-visual {
    position: relative;
    width: 100%;
-   min-width: 300px;
-   min-height: 300px;
+   min-width: 350px;
+   min-height: 350px;
    aspect-ratio: 1 / 1;
    height: auto;
    display: flex;
@@ -181,7 +181,7 @@
 
 .moon {
   position: absolute;
-  border-radius: 50%;
+  border-radius: 60%;
 }
 
 .blue-moon {
@@ -214,6 +214,27 @@
   z-index: 10;
 }
 
+.mars-image-overlay {
+   position: absolute;
+   inset: 0;
+   background-image: url("../images/project-images/astro-bkg-compressed.jpg");
+   background-size: cover;
+   background-position: center;
+   opacity: 0;
+   transition: opacity 0.35s ease;
+   z-index: 0;
+}
+
+.mars-text {
+   position: relative;
+   z-index: 2;
+   margin: 0;
+   padding: 0.15em 0.45em;
+   background-color: transparent;
+   color: var(--color-bkg);
+   transition: background-color 0.25s ease, color 0.25s ease;
+}
+
 .hero-visual:hover .outer-orbit {
   transform: rotate(90deg);
 }
@@ -224,6 +245,14 @@
 
 .hero-visual:hover .mars-image-overlay {
   opacity: 1;
+}
+
+.hero-visual:hover .mars-text,
+.hero-visual:focus-visible .mars-text,
+.hero-visual:focus-within .mars-text {
+   background-color: var(--color-bkg);
+   color: var(--color-body);
+   border: var(--divider-major) solid var(--color-body);
 }
 
 /* ========================================
