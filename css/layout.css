@@ -689,7 +689,7 @@
    .footer-newsletter {
       background-color: var(--color-yellow);
       border-top: var(--divider-major) solid var(--color-body);
-      border-bottom: 3px solid var(--color-body);
+      border-bottom: var(--divider-minor) solid var(--color-body);
    }
 
    .newsletter-inner {
@@ -724,33 +724,47 @@
    .footer-main {
       display: flex;
       flex-direction: column;
-      gap: var(--space-md);
-      place-items: center /* Shorthand for both at once, instead of either align-items or justify-items. */;
+      gap: var(--space-xl); /* Creates a clear boundary between text and the map */
+      align-items: stretch; /* Let children stretch to full width */
    }
 
    .footer-info {
-      display: grid;
-      grid-template-columns: 1fr;
-      align-items: center; /* Vertical alignment within each grid cell */
-      justify-items: center; /* Horizontal alignment within each grid cell */
-      
+      display: flex;
+      flex-direction: column; /* Flexbox is cleaner than Grid for a simple mobile column, but flexbox was having problems with alignment */
+      align-items: center; /* This one is giving problems as it doesnt center */
+      justify-content: start ; /* This one helps center horizontally */
+      gap: var(--space-lg); /* Minimum distance between Find Us, Contact Us, etc. */
+      padding-bottom: var(--space-xl); /* Creates a clear boundary between text and the map */
+   }
+
+   .footer-section {
+      width: 200px; /* This is the width of the section, it can be adjusted as needed */
+      text-align: left;
    }
 
    .footer-aside {
       display: flex;
       flex-direction: column;
+      width: 100%; /* Ensures the map and red social background stretch edge-to-edge */
+      border-bottom: var(--divider-minor) solid var(--color-body);
    }
 
    .footer-map {
-      border: 5px solid var(--color-body);
-      border-bottom: none;
+      display: flex;
+      flex-direction: column;
+      border-top: var(--divider-minor) solid var(--color-body);
    }
 
    .footer-social {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: space-between;
+      min-height: 100px;
       background-color: var(--color-red);
-      border-top: 5px solid var(--color-body);
-      border-bottom: 5px solid var(--color-body);
       color: var(--color-bkg);
+      padding: var(--space-md);
+      border-top: var(--divider-minor) solid var(--color-body);
    }
 
    .footer-social ul {
@@ -759,10 +773,21 @@
       gap: var(--space-md);
    }
 
-   .blue-divider {
+   .footer-social a {
+      font-size: var(--font-size-md);
+      font-weight: 500;
+   }
+
+   .footer-social .container {
+      margin-left: 0;
+      margin-right: 0;
+   }
+
+   .blue-divider { /*Or .sub-header instead?*/
+      display: flex;
+      align-items: center;
       background-color: var(--color-blue);
       width: 100%;
-      display: flex;
       justify-content: space-between;
    }
 
@@ -770,8 +795,7 @@
       display: block;
       margin: 0 auto;
       padding: var(--space-lg) 0;
-      height: auto;
-      width: 150px;
+      max-height: 100px;
    }
 
 
@@ -781,12 +805,45 @@
          display: flex;
          flex-direction: row;
          justify-content: space-between;
-         gap: var(--space-lg);
+         gap: var(--space-md);
+         min-width: 0;
       }
 
       .footer-info {
          display: grid;
-         grid-template-columns: 1fr 1fr;
+         grid-template-columns: repeat(2, minmax(0, 1fr));
+         align-items: stretch;
+         gap: var(--space-md);
+      }
+
+      .footer-section {
+         width: 200px;
+         height: 100%;
+         min-width: 0;
+      }
+
+      .footer-aside {
+         display: flex;
+         flex-direction: column;
+         width: 300px;
+         flex: 1 1 0;
+         border-left: var(--divider-minor) solid var(--color-body);
+         border-bottom: none;
+         align-self: stretch; /* Match the height of footer-info */
+      }
+
+      .footer-map {
+         flex: 1; /* Grow to fill remaining space so the iframe fills the full height */
+         border-top: none ;
+      }
+
+      .footer-map iframe {
+         height: 100%; /* Override the fixed 300px iframe height attribute */
+         display: block;
+      }
+
+      .blue-divider {
+         border-top: var(--divider-minor) solid var(--color-body);
       }
    }
 
@@ -796,13 +853,36 @@
 
    .bottombar-inner {
       display: flex;
-      justify-content: space-between;
+      justify-content: center;
       align-items: center;
       background-color: var(--color-body);
       color: var(--color-bkg);
    }
 
+   .bottombar-inner p {
+         display: flex;
+         align-items: center;
+         padding: var(--space-md);
+      }
+
    .bottom-nav ul {
-      display: flex;
-      flex-direction: row;
+         display: none;
+      }
+   
+
+   @media (min-width: 900px) {
+      .bottombar-inner {
+         display: flex;
+         justify-content: space-between;
+         align-items: center;
+         background-color: var(--color-body);
+         color: var(--color-bkg);
+         padding: var(--space-sm);
+      }
+
+      .bottom-nav ul {
+         display: flex;
+         flex-direction: row;
+         gap: var(--space-md);
+      }
    }
