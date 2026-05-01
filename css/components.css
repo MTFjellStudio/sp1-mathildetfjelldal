@@ -303,6 +303,14 @@
       box-shadow: 10px 10px 10px var(--color-body);
    }
 
+   .highlight-media img {
+      display: block;
+      width: 100%;
+      height: 370px;
+      object-fit: cover;
+      border-bottom: var(--divider-minor) solid var(--color-body);
+   }
+
    @media (min-width: 900px) {
       .highlight-tile {
          flex-direction: row;
