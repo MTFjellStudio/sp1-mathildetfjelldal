@@ -785,6 +785,12 @@
       border-top: var(--divider-minor) solid var(--color-body);
    }
 
+   .footer-map iframe {
+      width: 100%;
+      height: 300px;
+      border: 0;
+   }
+
    .footer-social {
       display: flex;
       flex-direction: row;
