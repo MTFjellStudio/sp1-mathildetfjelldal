@@ -465,7 +465,25 @@
 /* ========================================
 	NOTICEBOARD (HOMEPAGE)
    ======================================== */
-   
+   .noticeboard {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .news-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-lg);
+      padding: var(--space-lg);
+   }
+
+   @media (min-width: 900px) {
+      .news-grid {
+         display: grid;
+         grid-template-columns: repeat(3, 1fr);
+         gap: var(--space-lg);
+      }
+   }
 
 /* ========================================
 	EXHIBITIONS GRID LAYOUT
