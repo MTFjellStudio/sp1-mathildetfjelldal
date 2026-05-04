@@ -128,10 +128,27 @@
       background-repeat: no-repeat;
    }
 
-   @media (min-width: 900px) {
-      .category-btn {
-         min-height: 150px;
-      }
+   .booking-btn {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 3rem; /* Matches input height, so that the button and input align better */
+      padding: 0 2rem;
+      background-color: var(--color-yellow);
+      color: var(--color-body);
+      border: none;
+      text-transform: uppercase;
+      font-weight: 700;
+      cursor: pointer;
+      box-shadow: 8px 8px 0 var(--color-body); /* Retro red 2D shadow */
+      transition: transform 0.1s, box-shadow 0.1s;
+   }
+
+   .booking-btn:hover {
+      background-color: var(--color-bkg);
+      color: var(--color-body);
+      box-shadow: 4px 4px 0 var(--color-body);
+      transform: translate(4px, 4px); /* Creates a "pressed" clicking effect */
    }
 
    .readmore-btn {
@@ -178,6 +195,11 @@
       transform: translate(4px, 4px); /* Creates a "pressed" clicking effect, I would prefer to choose between this one and the yellow normal hover effect but not have both. */
    }
 
+   @media (min-width: 900px) {
+      .category-btn {
+         min-height: 150px;
+      }
+   }
 
 /* ========================================
 	COSMOLOGY WIDGET - Hero Visual on Homepage
