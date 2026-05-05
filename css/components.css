@@ -6,7 +6,7 @@
 	BUTTONS
    ======================================== */
 
-   .ticket-btn {
+   .btn {
       display: inline-block;
       background: var(--color-body);
       color: var(--color-bkg);
@@ -18,41 +18,41 @@
       letter-spacing: 0.05em;
    }
 
-   .ticket-btn:hover {
+   .btn:hover {
       background: var(--color-yellow);
       color: var(--color-body);
       box-shadow: 8px 8px 0 var(--color-body);
    }
 
-   header .ticket-btn {
+   header .btn {
       display: none;
    }
 
 
-   .ticket-btn-mobile {
+   .btn-mobile {
       display: inline-block;
       border: 5px solid var(--color-yellow);
       padding: 0.5rem 1rem;
       text-decoration: none;
    }
 
-   .ticket-btn-mobile:hover {
+   .btn-mobile:hover {
       background: var(--color-yellow);
       color: var(--color-body);
       border-color: var(--color-body);
    }
 
    @media (min-width: 900px) {
-      header .ticket-btn {
+      header .btn {
          display: inline-block;
       }
 
-      .ticket-btn-mobile {
+      .btn-mobile {
          display: none;
       }
    }
 
-   .cta-btn {
+   .btn-cta {
       display: inline-block;
       border: none;
       padding: 12px 24px;
@@ -61,74 +61,84 @@
       text-decoration: none;
    }
 
-   .cta-btn.night-sky {
+   .btn-cta.night-sky {
       background-color: var(--color-blue);
       color: var(--color-bkg);
    }
-   .cta-btn.night-sky:hover {
+   .btn-cta.night-sky:hover {
       background-color: transparent;
       border: 4px solid var(--color-body);
       color: var(--color-body);
    }
 
-   .cta-btn.solar-exploration {
+   .btn-cta.solar-exploration {
       background-color: var(--color-red);
       color: var(--color-bkg);
    }
-   .cta-btn.solar-exploration:hover {
+   .btn-cta.solar-exploration:hover {
       background-color: transparent;
       border: 4px solid var(--color-body);
       color: var(--color-body);
    }
 
-   .cta-btn.sky-above-us {
+   .btn-cta.sky-above-us {
       background-color: var(--color-yellow);
       color: var(--color-body);
    }
-   .cta-btn.sky-above-us:hover {
+   .btn-cta.sky-above-us:hover {
       background-color: transparent;
       border: 4px solid var(--color-body);
       color: var(--color-body);
    }
 
-   .category-btn {
+   .btn-white {
       display: inline-block;
       background-color: var(--color-bkg);
       color: var(--color-body);
-      padding: 1rem 3rem;
+      padding: var(--space-md) var(--space-lg);
       font-size: var(--font-size-h3);
       text-decoration: none;
       font-weight: var(--font-weight-bold);
       text-align: center;
       width: 100%;
-      padding: var(--space-xl) 0;
       display: flex;
       align-items: center;
       justify-content: center;
+      line-height: 5rem;
    }
 
-   .category-btn.category-kids:hover {
+   .btn-white.category-kids:hover {
       background-image: linear-gradient(var(--color-bkg), var(--color-bkg)), url("../images/project-images/kids-bkg-compressed.jpg");
       background-size: clamp(130px, 38%, 280px) 3.2rem, cover;
-      background-position: center, center;
+      background-position: center, top center;
       background-repeat: no-repeat;
    }
 
-   .category-btn.category-teachers:hover {
+   .btn-white.category-teachers:hover {
       background-image: linear-gradient(var(--color-bkg), var(--color-bkg)), url("../images/project-images/professor-bkg-compressed.jpg");
       background-size: clamp(130px, 38%, 280px) 3.2rem, cover;
       background-position: center, center;
       background-repeat: no-repeat;
    }
 
-   .category-btn.category-researchers:hover {
+   .btn-white.category-researchers:hover {
       background-image: linear-gradient(var(--color-bkg), var(--color-bkg)), url("../images/project-images/scientist-bkg-compressed.jpg");
       background-size: clamp(130px, 38%, 280px) 3.2rem, cover;
       background-position: center, center;
       background-repeat: no-repeat;
    }
 
-   .booking-btn {
+   @media (min-width: 900px) {
+
+       .btn-white {
+         display: flex;
+         flex-direction: row;
+         font-size: var(--font-size-md);
+         padding: var(--space-md) var(--space-lg);
+      }
+   }
+
+   .btn-yellow {
       display: flex;
       align-items: center;
       justify-content: center;
@@ -144,14 +154,14 @@
       transition: transform 0.1s, box-shadow 0.1s;
    }
 
-   .booking-btn:hover {
+   .btn-yellow:hover {
       background-color: var(--color-bkg);
       color: var(--color-body);
       box-shadow: 4px 4px 0 var(--color-body);
       transform: translate(4px, 4px); /* Creates a "pressed" clicking effect */
    }
 
-   .readmore-btn {
+   .btn-yellow-narrow {
       display: inline-block;
       padding: 0.5rem 1.5rem;
       text-decoration: none;
@@ -193,12 +203,6 @@
       background-color: var(--color-blue);
       box-shadow: 4px 4px 0 var(--color-body);
       transform: translate(4px, 4px); /* Creates a "pressed" clicking effect, I would prefer to choose between this one and the yellow normal hover effect but not have both. */
-   }
-
-   @media (min-width: 900px) {
-      .category-btn {
-         min-height: 150px;
-      }
    }
 
 /* ========================================

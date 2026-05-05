@@ -105,6 +105,7 @@
 
    .topbar #topbar-country-select option {
       color: var(--color-bkg);
+      background-color: var(--color-body);
    }
 
    .topbar .country-select img {
@@ -443,7 +444,16 @@
       flex-direction: column;
       background-color: var(--color-body);
       color: var(--color-bkg);
-      padding: var(--space-xl) var(--space-xl);
+      padding-bottom: 50px;
+      padding-top: 50px;
+   }
+
+   .main-categories .category-list {
+      margin: 0 16px;
+   }
+
+   .main-categories .category-title.container {
+      margin: 0;
    }
 
    .main-categories h2 {
@@ -455,7 +465,13 @@
       display: flex;
       flex-direction: column;
       gap: var(--space-md);
-      padding: var(--space-lg);
+      padding: var(--space-lg) 0 0;
+   }
+
+   @media (min-width: 450px) {
+      .main-categories .category-list {
+         margin: 0 20px;
+      }
    }
 
    @media (min-width: 900px) {
@@ -464,13 +480,17 @@
          flex-direction: column;
       }
 
+      .main-categories .category-list {
+         margin: 0 80px;
+      }
+
       .main-categories ul {
          list-style: none;
          display: flex;
          flex-direction: row;
          width: 100%;
          gap: var(--space-md);
-         padding: var(--space-lg);
+         padding: var(--space-lg) 0 0;
       }
 
       .main-categories ul li {
@@ -482,7 +502,7 @@
          font-size: var(--font-size-h2);
       }
 
-      .category-btn {
+      .btn-white {
          display: flex;
          flex-direction: row;
          font-size: var(--font-size-md);
