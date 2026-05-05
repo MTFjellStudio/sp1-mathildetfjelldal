@@ -518,11 +518,25 @@
       flex-direction: column;
    }
 
+   .noticeboard-title {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+      padding: var(--space-lg) 0;
+   }
+
+   .schedule-highlight {
+      font-weight: var(--font-weight-bold);
+      color: var(--color-red);
+   }
+
    .news-grid {
       display: grid;
       grid-template-columns: 1fr;
       gap: var(--space-lg);
-      padding: var(--space-lg);
+      padding-top: var(--space-lg);
+      padding-bottom: var(--space-xl);
    }
 
    @media (min-width: 900px) {
