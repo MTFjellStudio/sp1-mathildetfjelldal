@@ -99,11 +99,14 @@
     --border-width: 1px;
 
     /* Bauhaus divider widths — mobile-first */
+    --divider-max: 12px;
     --divider-major: 6px;  /* header bottom, footer top */
     --divider-minor: 3px;  /* section dividers inside main */
+}
 
 @media (min-width: 900px) {
    :root {
+      --divider-max: 24px;
       --divider-major: 12px;
       --divider-minor: 6px;
    }
