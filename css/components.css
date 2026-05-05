@@ -16,12 +16,14 @@
       padding: 1.1rem 1.8rem;
       box-shadow: 8px 8px 0 var(--color-red);
       letter-spacing: 0.05em;
+      transition: transform 0.1s, box-shadow 0.1s;
    }
 
    .btn:hover {
       background: var(--color-yellow);
       color: var(--color-body);
-      box-shadow: 8px 8px 0 var(--color-body);
+      box-shadow: 4px 4px 0 var(--color-body);
+      transform: translate(4px, 4px);
    }
 
    header .btn {
