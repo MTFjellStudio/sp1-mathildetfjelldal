@@ -99,27 +99,18 @@
     --border-width: 1px;
 
     /* Bauhaus divider widths — mobile-first */
-    --divider-max: 12px;
     --divider-major: 6px;  /* header bottom, footer top */
     --divider-minor: 3px;  /* section dividers inside main */
+    --divider-thin: 2px;   /* thin dividers for small elements */
 }
 
 @media (min-width: 900px) {
    :root {
-      --divider-max: 24px;
       --divider-major: 12px;
       --divider-minor: 6px;
+      --divider-thin: 3px;
    }
 }
-  /* ========================================
-     SHADOWS
-     ======================================== */
-  
-    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
-    --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.15);
-    --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.2);
-    --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.25);
-
 
 /* ========================================
 	LAYOUT MARGINS & GUTTERS (MOBILE-FIRST)
@@ -136,6 +127,3 @@
 /* ========================================
 	DESKTOP OVERRIDES (900PX+)
    ======================================== */
-
-
-}

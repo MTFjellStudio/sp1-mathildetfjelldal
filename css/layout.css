@@ -144,6 +144,7 @@
       justify-content: space-between;
       align-items: center;
       gap: var(--space-md);
+      padding-left: 20px; /*Just to give the logo some breathing room. */
    }
 
    .logo {
@@ -151,7 +152,7 @@
       display: flex;
       align-items: center;
       border-right: var(--divider-major) solid var(--color-body);
-      padding-right: var(--space-lg);
+      padding-right: var(--space-xl);
    }
 
    .logo img {
@@ -160,7 +161,31 @@
    }
 
    .main-nav {
-      display: none;
+      display: none; /* Hide on mobile, shown on desktop */
+   }
+
+   .header-icons-box {
+      align-self: stretch;
+      display: flex;
+      align-items: center;
+      padding-right: var(--space-md);
+   }
+
+   @media (min-width: 900px) {
+
+      .header-icons-box {
+         border-left: var(--divider-major) solid var(--color-body);
+         padding-left: var(--space-lg);
+         align-self: stretch;
+         display: flex;
+         align-items: center;
+         background-color: var(--color-yellow);
+         /* This was a bit of a clunky solution. Extends yellow area through header right padding to viewport edge. */
+         margin-right: calc(var(--space-lg) * -1);
+         padding-right: var(--space-xl);
+         padding-left: var(--space-xl);
+      }
+
    }
 
    /* ========================================
@@ -173,7 +198,10 @@
 
    .main-nav-mobile {
       display: none;
-      padding: 0 var(--space-lg) var(--space-md);
+      padding: 0 var(--space-xl) var(--space-xl);
+      border-top: var(--divider-major) solid var(--color-body);
+      border-left: var(--divider-major) solid var(--color-body);
+      border-right: var(--divider-major) solid var(--color-body);
    }
 
    .menu-toggle-label {
@@ -200,7 +228,7 @@
       text-decoration: none;
       font-family: var(--font-heading);
       font-size: var(--font-size-h4);
-      border-top: var(--divider-minor) solid var(--color-body);
+      border-bottom: var(--divider-minor) solid var(--color-body);
    }
 
    .main-nav-mobile .nav-list-mobile li:last-child a {
@@ -496,7 +524,7 @@
       justify-content: center;
       padding: var(--space-lg) 0;
       background-color: var(--color-yellow);
-      border-bottom: var(--divider-major) solid var(--color-body);
+      border-bottom: var(--divider-minor) solid var(--color-body);
    }
 
    .page-title-text {
@@ -745,7 +773,7 @@
    ======================================== */
 
    .getting-here {
-      border-bottom: var(--divider-major) solid var(--color-body);
+      border-bottom: var(--divider-minor) solid var(--color-body);
    }
 
    .sub-header {
@@ -834,7 +862,7 @@
       }
 
       .getting-here .location-visuals {
-         border-left: var(--divider-major) solid var(--color-body);
+         border-left: var(--divider-minor) solid var(--color-body);
       }
 
       .accessibility .location-info {
@@ -880,7 +908,7 @@
       }
 
       .admission-text {
-         border-left: var(--divider-major) solid var(--color-body);
+         border-left: var(--divider-minor) solid var(--color-body);
          padding-left: var(--space-lg);
       }
    }
@@ -924,7 +952,7 @@
       .event-wrapper {
          grid-template-columns: 1.2fr 1fr;
          gap: var(--space-lg);
-         border-bottom: var(--divider-major) solid var(--color-body);
+         border-bottom: var(--divider-minor) solid var(--color-body);
       }
 
       .event-wrapper .media-panel {
@@ -958,7 +986,7 @@
 
    .footer-newsletter {
       background-color: var(--color-yellow);
-      border-top: var(--divider-major) solid var(--color-body);
+      border-top: var(--divider-minor) solid var(--color-body);
       border-bottom: var(--divider-minor) solid var(--color-body);
    }
 
