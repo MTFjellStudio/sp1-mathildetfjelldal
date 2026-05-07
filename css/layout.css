@@ -1185,6 +1185,55 @@
 	COMING SOON PAGE LAYOUT
    ======================================== */
 
+   .coming-soon-main {
+      padding-bottom: var(--space-2xl);
+   }
+
+   .coming-soon-hero {
+      padding-top: var(--space-xl);
+      padding-bottom: var(--space-3xl);
+      background-color: var(--color-yellow);
+      border-bottom: var(--divider-minor) solid var(--color-body);
+   }
+
+   .coming-soon-title {
+      margin: var(--space-md) 0 0;
+      font-size: 5rem;
+      letter-spacing: 0.03em;
+      line-height: 0.95;
+   }
+
+   .coming-soon-explore {
+      padding-top: var(--space-xl);
+   }
+
+   .coming-soon-shapes {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: var(--space-md);
+      align-items: start;
+      justify-items: center;
+      margin: 0;
+      padding: var(--space-lg) 0 var(--space-2xl);
+   }
+
+   .coming-soon-shapes .exhibition-item-minimal {
+      width: 100%;
+      max-width: 240px;
+   }
+
+   @media (min-width: 900px) {
+      .coming-soon-hero {
+         padding-top: var(--space-2xl);
+      padding-bottom: var(--space-4xl);
+      }
+
+      .coming-soon-shapes {
+         grid-template-columns: repeat(3, minmax(0, 1fr));
+         gap: var(--space-lg);
+      }
+   }
+
    /* ========================================
 	FOOTER
    ======================================== */
