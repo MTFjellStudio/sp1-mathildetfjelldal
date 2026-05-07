@@ -182,7 +182,7 @@
    .newsletter-form input {
       height: 3rem; /* Fixed, larger height */
       padding: 0 1rem;
-      border: var(--divider-minor) solid var(--color-body);
+      border: var(--divider-thin) solid var(--color-body);
       background-color: var(--color-bkg);
       color: var(--color-body);
       font-size: var(--font-size-md);
@@ -402,6 +402,10 @@
          gap: var(--space-md);
          padding: var(--space-md);
          min-width: 0;
+         flex: 1 1 36%; /*I wanted the highlight image to align with the news-tile below it, and the way i 
+         figured to do that was to force the width of the highlight image with percentage in a grid. 
+         Would like to figure out if there is a better way though? Perhaps applying a grid for the entire 
+         noticeboard and then setting the highlight to full width somehow? */
       }
 
        .highlight-media img {
