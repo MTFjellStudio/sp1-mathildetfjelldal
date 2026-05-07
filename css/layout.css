@@ -529,7 +529,7 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      padding: var(--space-lg) 0;
+      padding: var(--space-xl) 0;
    }
 
    .schedule-highlight {
@@ -543,6 +543,12 @@
       gap: var(--space-lg);
       padding-top: var(--space-lg);
       padding-bottom: var(--space-xl);
+   }
+
+   @media (min-width: 450px) {
+      .news-grid {
+         grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
    }
 
    @media (min-width: 900px) {
@@ -562,7 +568,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: var(--space-lg) 0;
+      padding: var(--space-xl) 0;
       background-color: var(--color-yellow);
       border-bottom: var(--divider-minor) solid var(--color-body);
    }
@@ -664,14 +670,14 @@
 	COSMOLOGY EXHIBITION LAYOUT
    ======================================== */
 
-   .highlights-section {
+   .displays-section {
       display: flex;
       flex-direction: column;
       gap: var(--space-lg);
 
    }
 
-   .highlight-item {
+      .display-item {
       display: flex;
       flex-direction: column;
       justify-content: center;
@@ -681,22 +687,22 @@
       padding-bottom: 20px;
    }
 
-   .highlight-content {
+      .display-content {
       max-width: 600px;
       text-align: center;
    }
 
-   .highlight-content p {
+      .display-content p {
       text-align: left;
       margin: 20px;
    }
 
-   .highlight-content i {
+   .display-content i {
       font-size: 30px;
       color: var(--color-red);
    }
 
-   .highlight-visual {
+   .display-visual {
       display: flex;
       justify-content: center;
       align-items: center;
@@ -712,7 +718,7 @@
       flex-direction: column;
       align-items: center;
       gap: var(--space-lg);
-      padding: var(--space-xl) 0;
+      padding: var(--space-2xl) 0;
    }
 
    .booking-navigation {
@@ -725,51 +731,54 @@
 
    @media (min-width: 900px) {
 
-      .highlights-section {
+        .displays-section {
          gap: 0;
       }
 
-      .highlight-block {
+      .display-block {
          display: flex;
          flex-direction: row;
          align-items: stretch;
          border-top: var(--divider-minor) solid var(--color-body);
       }
 
-      .highlight-block:last-child {
+      .display-block:last-child {
          border-bottom: var(--divider-minor) solid var(--color-body);
       }
 
-      .highlight-block.inverse-block {
+      .display-block.inverse-block {
          flex-direction: row-reverse;
       }
 
-      .highlight-item {
+      .display-item {
          flex: 0 0 50%;
          min-height: 250px;
-         align-items: flex-start;
+         align-items: center;
+         justify-content: center;
       }
 
-      .highlight-content {
+      .display-content {
          text-align: left;
+         align-items: center;
+         justify-content: center;
       }
 
-      .highlight-content p {
+      .display-content p {
          margin: 0 0 var(--space-xs) 0;
       }
 
-      .highlight-content p:last-child {
+      .display-content p:last-child {
          margin-bottom: 0;
       }
 
-      .highlight-header {
+      .display-header {
          display: flex;
          flex-direction: row;
          align-items: center;
          gap: var(--space-lg);
       }
 
-      .highlight-visual {
+      .display-visual {
          flex: 1 1 auto;
          max-height: none;
          height: auto;
@@ -779,12 +788,12 @@
          border-left: var(--divider-minor) solid var(--color-body);
       }
 
-      .highlight-block.inverse-block .highlight-visual {
+      .display-block.inverse-block .display-visual {
          border-left: none;
          border-right: var(--divider-minor) solid var(--color-body);
       }
 
-      .highlight-visual img {
+      .display-visual img {
          width: 100%;
          height: 100%;
          object-fit: cover;
@@ -957,6 +966,45 @@
 	EVENTS PAGE LAYOUT
    ======================================== */
 
+   .featured-section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+   }
+
+   .featured-block {
+      display: flex;
+      flex-direction: column;
+   }
+
+   .featured-block:last-child {
+      border-bottom: var(--divider-minor) solid var(--color-body);
+   }
+
+   .events-featured .display-item {
+      align-items: flex-start;
+   }
+
+   .events-featured .display-content {
+      text-align: left;
+   }
+
+   .events-featured .display-content p {
+      margin: 0 0 var(--space-md) 0;
+   }
+
+   .events-featured .display-content p:last-of-type {
+      margin-bottom: var(--space-lg);
+   }
+
+   .events-featured .display-header {
+      margin-bottom: var(--space-sm);
+   }
+
+   .events-featured .display-visual {
+      max-height: 320px;
+   }
+
    .event-wrapper {
       display: grid;
       grid-template-columns: 1fr;
@@ -973,7 +1021,6 @@
    }
 
    .holiday-club .info-panel {
-      padding: var(--space-md);
       align-items: center;
       justify-content: center;
    }
@@ -989,6 +1036,39 @@
    }
 
    @media (min-width: 900px) {
+      .featured-section {
+         gap: 0;
+      }
+
+      .featured-block {
+         flex-direction: row;
+         align-items: stretch;
+         border-top: var(--divider-minor) solid var(--color-body);
+      }
+
+      .featured-block.inverse-block {
+         flex-direction: row-reverse;
+      }
+
+      .events-featured .display-item {
+         flex: 0 0 50%;
+      }
+
+      .events-featured .display-visual {
+         flex: 1 1 auto;
+         max-height: none;
+         min-height: 360px;
+      }
+
+      .featured-block .display-visual {
+         border-left: var(--divider-minor) solid var(--color-body);
+      }
+
+      .featured-block.inverse-block .display-visual {
+         border-left: none;
+         border-right: var(--divider-minor) solid var(--color-body);
+      }
+
       .event-wrapper {
          grid-template-columns: 1.2fr 1fr;
          gap: var(--space-lg);
@@ -1034,7 +1114,7 @@
       display: flex;
       flex-direction: column;
       gap: var(--space-lg);
-      padding: var(--space-lg) 0;
+      padding: var(--space-2xl) 0;
       align-items: center;
       justify-content: center;
    }
