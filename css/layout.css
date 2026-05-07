@@ -44,6 +44,164 @@
       }
    }
 
+/* ========================================
+   SHARED LAYOUTS
+   ======================================== */
+
+   .page-title {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: var(--space-xl) 0;
+      background-color: var(--color-yellow);
+      border-bottom: var(--divider-minor) solid var(--color-body);
+   }
+
+   .page-title-text {
+      text-align: left;
+      max-width: 500px;
+   }
+
+   .page-title-text p {
+      font-weight: var(--font-weight-bold);
+   }
+
+   .page-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      align-items: center;
+      justify-content: center;
+   }
+
+   .page-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 300px;
+   }
+
+   .sub-header {
+      background-color: var(--color-blue);
+      color: var(--color-bkg);
+      padding: var(--space-md) var(--space-lg);
+   }
+
+   .displays-section {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-lg);
+   }
+
+   .display-item {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: var(--space-md);
+      padding-top: 20px;
+      padding-bottom: var(--space-3xl);
+   }
+
+   .display-content {
+      max-width: 600px;
+      text-align: center;
+   }
+
+   .display-content p {
+      text-align: left;
+      margin: 20px;
+   }
+
+   .display-content i {
+      font-size: 30px;
+      color: var(--color-red);
+   }
+
+   .display-visual {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      max-width: 100%;
+      max-height: 250px;
+      overflow: hidden;
+      border-top: var(--divider-minor) solid var(--color-body);
+      border-bottom: var(--divider-minor) solid var(--color-body);
+   }
+
+   @media (min-width: 900px) {
+      .page-grid {
+         display: grid;
+         grid-template-columns: 1fr 1fr;
+         align-items: center;
+         justify-content: center;
+      }
+
+      .display-block {
+         display: flex;
+         flex-direction: row;
+         align-items: stretch;
+         border-top: var(--divider-minor) solid var(--color-body);
+      }
+
+      .display-block:last-child {
+         border-bottom: var(--divider-minor) solid var(--color-body);
+      }
+
+      .display-block.inverse-block {
+         flex-direction: row-reverse;
+      }
+
+      .display-item {
+         flex: 0 0 50%;
+         min-height: 250px;
+         align-items: center;
+         justify-content: center;
+      }
+
+      .display-content {
+         text-align: left;
+         align-items: center;
+         justify-content: center;
+      }
+
+      .display-content p {
+         margin: 0 0 var(--space-xs) 0;
+      }
+
+      .display-content p:last-child {
+         margin-bottom: 0;
+      }
+
+      .display-header {
+         display: flex;
+         flex-direction: row;
+         align-items: center;
+         gap: var(--space-lg);
+      }
+
+      .display-visual {
+         flex: 1 1 auto;
+         max-height: none;
+         height: auto;
+         min-height: 360px;
+         border-top: none;
+         border-bottom: none;
+         border-left: var(--divider-minor) solid var(--color-body);
+      }
+
+      .display-block.inverse-block .display-visual {
+         border-left: none;
+         border-right: var(--divider-minor) solid var(--color-body);
+      }
+
+      .display-visual img {
+         width: 100%;
+         height: 100%;
+         object-fit: cover;
+      }
+   }
+
 
 /* ========================================
 	TOPBAR (DESKTOP-ONLY: LOGIN, BLOG, SUPPORT, COUNTRY)
@@ -560,54 +718,12 @@
    }
 
 /* ========================================
-	SUB-PAGE HEADER & INTRODUCTION
-   ======================================== */
-
-   .page-title {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-      padding: var(--space-xl) 0;
-      background-color: var(--color-yellow);
-      border-bottom: var(--divider-minor) solid var(--color-body);
-   }
-
-   .page-title-text {
-      text-align: left;
-      max-width: 500px;
-   }
-
-   .page-title-text p {
-      font-weight: var(--font-weight-bold);
-   }
-
-   .page-grid {
-      display: grid;
-      grid-template-columns: 1fr;
-      align-items: center;
-      justify-content: center;
-   }
-
-   .page-visual {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      max-width: 300px;
-   }
-
-   @media (min-width: 900px) {
-      .page-grid {
-         display: grid;
-         grid-template-columns: 1fr 1fr;
-         align-items: center;
-         justify-content: center;
-      }
-   }
-
-/* ========================================
 	EXHIBITIONS GRID LAYOUT
    ======================================== */
+
+   main#main.container > .breadcrumbs {
+      padding-top: var(--space-xl);
+   }
 
    .page-intro {
       text-align: left;
@@ -670,49 +786,6 @@
 	COSMOLOGY EXHIBITION LAYOUT
    ======================================== */
 
-   .displays-section {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-lg);
-
-   }
-
-      .display-item {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      gap: var(--space-md);
-      padding-top: 20px;
-      padding-bottom: 20px;
-   }
-
-      .display-content {
-      max-width: 600px;
-      text-align: center;
-   }
-
-      .display-content p {
-      text-align: left;
-      margin: 20px;
-   }
-
-   .display-content i {
-      font-size: 30px;
-      color: var(--color-red);
-   }
-
-   .display-visual {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      max-width: 100%;
-      max-height: 250px;
-      overflow: hidden;
-      border-top: var(--divider-minor) solid var(--color-body);
-      border-bottom: var(--divider-minor) solid var(--color-body);
-   }
-
    .booking {
       display: flex;
       flex-direction: column;
@@ -731,72 +804,8 @@
 
    @media (min-width: 900px) {
 
-        .displays-section {
+      .displays-section {
          gap: 0;
-      }
-
-      .display-block {
-         display: flex;
-         flex-direction: row;
-         align-items: stretch;
-         border-top: var(--divider-minor) solid var(--color-body);
-      }
-
-      .display-block:last-child {
-         border-bottom: var(--divider-minor) solid var(--color-body);
-      }
-
-      .display-block.inverse-block {
-         flex-direction: row-reverse;
-      }
-
-      .display-item {
-         flex: 0 0 50%;
-         min-height: 250px;
-         align-items: center;
-         justify-content: center;
-      }
-
-      .display-content {
-         text-align: left;
-         align-items: center;
-         justify-content: center;
-      }
-
-      .display-content p {
-         margin: 0 0 var(--space-xs) 0;
-      }
-
-      .display-content p:last-child {
-         margin-bottom: 0;
-      }
-
-      .display-header {
-         display: flex;
-         flex-direction: row;
-         align-items: center;
-         gap: var(--space-lg);
-      }
-
-      .display-visual {
-         flex: 1 1 auto;
-         max-height: none;
-         height: auto;
-         min-height: 360px;
-         border-top: none;
-         border-bottom: none;
-         border-left: var(--divider-minor) solid var(--color-body);
-      }
-
-      .display-block.inverse-block .display-visual {
-         border-left: none;
-         border-right: var(--divider-minor) solid var(--color-body);
-      }
-
-      .display-visual img {
-         width: 100%;
-         height: 100%;
-         object-fit: cover;
       }
 
       .booking {
@@ -823,12 +832,6 @@
 
    .getting-here {
       border-bottom: var(--divider-minor) solid var(--color-body);
-   }
-
-   .sub-header {
-      background-color: var(--color-blue);
-      color: var(--color-bkg);
-      padding: var(--space-md) var(--space-lg);
    }
 
    .location-info {

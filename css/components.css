@@ -203,6 +203,7 @@
 
    .newsletter-form button:hover {
       background-color: var(--color-blue);
+      color: var(--color-bkg);
       box-shadow: 4px 4px 0 var(--color-body);
       transform: translate(4px, 4px); /* Creates a "pressed" clicking effect, I would prefer to choose between this one and the yellow normal hover effect but not have both. */
    }
@@ -534,7 +535,7 @@
       width: 160px;
       height: 160px;
       opacity: 0;
-      transform: scale(0.96);
+      transform: scale(0.96) rotate(0deg);
       transition: opacity 0.35s ease, transform 0.35s ease;
       background-image: var(--tile-image);
       background-size: cover;
@@ -547,6 +548,8 @@
    .colored-shape {
       width: 160px;
       height: 160px;
+      transform: rotate(0deg);
+      transition: transform 0.35s ease;
    }
 
    .shape-circle {
@@ -603,7 +606,19 @@
    .visual-container:hover .shape-image-overlay,
    .visual-container:focus-within .shape-image-overlay {
       opacity: 1;
-      transform: scale(1);
+      transform: scale(1.08) rotate(90deg);
+   }
+
+   .visual-container:hover .colored-shape,
+   .visual-container:focus-within .colored-shape {
+      transform: scale(1.08) rotate(90deg);
+   }
+
+   .visual-container:hover .colored-shape.shape-circle,
+   .visual-container:focus-within .colored-shape.shape-circle,
+   .visual-container:hover .shape-image-overlay.shape-circle,
+   .visual-container:focus-within .shape-image-overlay.shape-circle {
+      transform: scale(1.14) rotate(90deg);
    }
 
    /* This is the overlapping text box. But the position is a bit tricky as it doesnt work well for different shapes. It needs to be to the bottom-right on the shape, but also overlap it. */
@@ -614,22 +629,22 @@
       transform: translateX(110%); /* Pushes it off-center to the right to overlap the shape */
       
       background-color: var(--color-bkg);
-      border: 3px solid var(--color-body);
+      border: var(--divider-thin) solid var(--color-body);
       width: fit-content;
-      padding: 0 0.5rem;
+      padding: 0 var(--space-sm);
       z-index: 2; /* This is to ensure it appears above the shapes, "bring to front" if you will. */
    }
 
-   .name-box h3 {
+   .name-box p {
       margin: 0;
-      line-height: 1.7;
+      line-height: 2;
+      font-weight: var(--font-weight-bold);
    }
 
-
-
-/* ========================================
-	FEATURED CATEGORY CARD
-   ======================================== */
+   .content-container p span {
+      color: var(--color-blue);
+      font-weight: var(--font-weight-bold);
+   }
 
 /* ========================================
 	NEWSLETTER COMPONENT
