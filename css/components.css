@@ -339,6 +339,30 @@
       width: 100%;
       max-width: 100%;
       max-height: none;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+   }
+
+   .tile-link-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+   }
+
+   .highlight-tile .btn,
+   .news-tile .btn {
+      position: relative;
+      z-index: 2;
+   }
+
+   .highlight-tile:hover,
+   .highlight-tile:focus-within,
+   .news-tile:hover,
+   .news-tile:focus-within {
+      border-color: var(--color-body);
+      box-shadow: 10px 10px 0 var(--color-body);
    }
 
    .highlight-media img {
@@ -373,7 +397,7 @@
       .highlight-tile {
          display: flex;
          flex-direction: row;
-         max-height: 370px;
+         max-height: 400px;
       }
 
       .highlight-row.top-row {
@@ -384,6 +408,12 @@
          gap: var(--space-md);
       }
 
+      .highlight-row.top-row h3,
+      .highlight-row.top-row p,
+      .highlight-row.middle-row h3 {
+         margin: 0;
+      }
+
        .highlight-row.middle-row {
          flex-direction: row;
       }
@@ -392,8 +422,14 @@
          display: flex;
          flex-direction: row;
          justify-content: space-between;
-         align-items: flex-start;
+             align-items: flex-start;
          gap: var(--space-md);
+             height: auto;
+      }
+
+      .highlight-row.bottom-row .btn {
+         margin-left: auto;
+         align-self: flex-end;
       }
 
        .highlight-media img {
@@ -405,12 +441,12 @@
          flex: 1; /* Problem here is that the image is wayyy too tall. Cap height? This allows the media to take up all available space, while the info section will size itself based on its content. */
       }
 
-       .highlight-info {
-         display: grid;
-         grid-template-rows: auto auto 1fr;
-         align-content: stretch;
-         gap: var(--space-md);
-         padding: var(--space-md);
+          .highlight-info {
+             display: flex;
+             flex-direction: column;
+             justify-content: space-between;
+             gap: var(--space-sm);
+             padding: var(--space-xl);
          min-width: 0;
          flex: 1 1 36%; /*I wanted the highlight image to align with the news-tile below it, and the way i 
          figured to do that was to force the width of the highlight image with percentage in a grid. 
@@ -442,6 +478,10 @@
       width: 100%;
       max-width: none;
       min-height: 370px;
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
    }
 
    .news-tile-tablet-only {

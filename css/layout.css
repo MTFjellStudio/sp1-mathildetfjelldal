@@ -53,7 +53,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding: var(--space-xl) 0;
+      padding: var(--space-2xl) 0;
       background-color: var(--color-yellow);
    }
 
@@ -89,7 +89,7 @@
    .sub-header {
       background-color: var(--color-blue);
       color: var(--color-bkg);
-      padding: var(--space-md) var(--space-lg);
+      padding: var(--space-lg) var(--space-lg);
       border-top: var(--divider-minor) solid var(--color-body);
       border-bottom: var(--divider-minor) solid var(--color-body);
    }
@@ -106,8 +106,8 @@
       justify-content: center;
       align-items: center;
       gap: var(--space-md);
-      padding-top: 20px;
-      padding-bottom: var(--space-3xl);
+      padding-top: var(--space-xl);
+      padding-bottom: var(--space-4xl);
    }
 
    .display-content {
@@ -137,6 +137,10 @@
    }
 
    @media (min-width: 900px) {
+      .page-title {
+         padding: var(--space-3xl) 0;
+      }
+
       .page-grid {
          display: grid;
          grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
@@ -627,8 +631,8 @@
       flex-direction: column;
       background-color: var(--color-body);
       color: var(--color-bkg);
-      padding-bottom: 50px;
-      padding-top: 50px;
+      padding-bottom: var(--space-5xl);
+      padding-top: var(--space-5xl);
    }
 
    .main-categories .category-list {
@@ -706,7 +710,7 @@
       flex-direction: row;
       justify-content: space-between;
       align-items: center;
-      padding: var(--space-xl) 0;
+      padding: var(--space-2xl) 0;
    }
 
    .schedule-highlight {
@@ -718,8 +722,8 @@
       display: grid;
       grid-template-columns: 1fr;
       gap: var(--space-lg);
-      padding-top: var(--space-2xl);
-      padding-bottom: var(--space-2xl);
+      padding-top: var(--space-3xl);
+      padding-bottom: var(--space-3xl);
    }
 
    @media (min-width: 450px) {
@@ -747,7 +751,7 @@
    .page-intro {
       text-align: left;
       max-width: 800px;
-      padding: var(--space-lg) 0;
+      padding: var(--space-2xl) 0;
       margin: 0 auto;
    }
 
@@ -763,7 +767,7 @@
    }
 
    .exhibition-item {
-      padding: var(--space-lg) var(--space-md);
+      padding: var(--space-xl) var(--space-md);
    }
 
    /* Center the text content on mobile/default layout */
@@ -787,7 +791,7 @@
 
    .exhibition-item {
       /* Draw right and bottom borders on every item */
-      padding: var(--space-lg);
+      padding: var(--space-2xl) var(--space-lg);
    }
 
    .content-container {
@@ -810,7 +814,7 @@
       flex-direction: column;
       align-items: center;
       gap: var(--space-lg);
-      padding: var(--space-2xl) 0;
+      padding: var(--space-3xl) 0;
    }
 
    .booking-navigation {
@@ -852,7 +856,7 @@
    .location-info {
       display: grid;
       grid-template-columns: 1fr;
-      gap: var(--space-2xl);
+      gap: var(--space-3xl);
    }
 
    .location-visuals {
@@ -906,8 +910,8 @@
    .access-content {
       display: grid;
       grid-template-columns: 1fr;
-      gap: var(--space-lg);
-      padding: var(--space-lg) 0;
+      gap: var(--space-2xl);
+      padding: var(--space-2xl) 0;
    }
 
    .illustration-content {
@@ -926,8 +930,8 @@
    .amenities-grid {
       display: grid;
       grid-template-columns: 1fr;
-      padding: var(--space-lg);
-      gap: var(--space-lg);
+      padding: var(--space-2xl) var(--space-lg);
+      gap: var(--space-2xl);
    }
 
    @media (min-width: 900px) {
@@ -1013,7 +1017,7 @@
    .featured-section {
       display: flex;
       flex-direction: column;
-      gap: var(--space-lg);
+      gap: var(--space-2xl);
    }
 
    .featured-block {
@@ -1048,7 +1052,7 @@
    .event-wrapper {
       display: grid;
       grid-template-columns: 1fr;
-      gap: var(--space-lg);
+      gap: var(--space-2xl);
    }
 
    .event-wrapper .media-panel {
@@ -1063,8 +1067,8 @@
    }
 
    .event-layout {
-      padding-top: var(--space-2xl);
-      padding-bottom: var(--space-2xl);
+      padding-top: var(--space-3xl);
+      padding-bottom: var(--space-3xl);
    }
 
    .holiday-club {
@@ -1086,8 +1090,8 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      padding-top: var(--space-2xl);
-      padding-bottom: var(--space-2xl);
+      padding-top: var(--space-3xl);
+      padding-bottom: var(--space-3xl);
    }
 
    .holiday-layout > * {
@@ -1110,19 +1114,19 @@
       flex-direction: column;
       align-items: stretch;
       justify-content: center;
-      gap: var(--space-lg);
-      padding: var(--space-2xl) 0;
+      gap: var(--space-2xl);
+      padding: var(--space-3xl) 0;
    }
 
    .get-involved-content {
-      padding-top: var(--space-lg);
-      padding-bottom: var(--space-lg);
+      padding-top: var(--space-2xl);
+      padding-bottom: var(--space-2xl);
    }
 
    .donate-support {
       color: var(--color-bkg);
-      padding-top: var(--space-xl);
-      padding-bottom: var(--space-3xl);
+      padding-top: var(--space-2xl);
+      padding-bottom: var(--space-4xl);
    }
 
    .donate-support .info-panel {
@@ -1174,7 +1178,7 @@
 
       .event-wrapper {
          grid-template-columns: 1.2fr 1fr;
-         gap: var(--space-lg);
+         gap: var(--space-2xl);
          border-bottom: var(--divider-minor) solid var(--color-body);
          align-items: stretch;
       }
@@ -1190,8 +1194,8 @@
       }
 
       .get-involved-content {
-         padding-top: var(--space-xl);
-         padding-bottom: var(--space-3xl);
+         padding-top: var(--space-2xl);
+         padding-bottom: var(--space-4xl);
       }
 
       .holiday-club {
@@ -1279,7 +1283,7 @@
       display: flex;
       flex-direction: column;
       gap: var(--space-lg);
-      padding: var(--space-2xl) 0;
+      padding: var(--space-3xl) 0;
       align-items: center;
       justify-content: center;
    }
@@ -1317,7 +1321,7 @@
       align-items: center; /* This one is giving problems as it doesnt center */
       justify-content: start ; /* This one helps center horizontally */
       gap: var(--space-lg); /* Minimum distance between Find Us, Contact Us, etc. */
-      padding-bottom: var(--space-xl); /* Creates a clear boundary between text and the map */
+      padding-bottom: var(--space-2xl); /* Creates a clear boundary between text and the map */
    }
 
    .footer-section {
