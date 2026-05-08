@@ -23,6 +23,7 @@
       background: var(--color-yellow);
       color: var(--color-body);
       box-shadow: 4px 4px 0 var(--color-body);
+      border: var(--divider-thin) solid var(--color-body);
       transform: translate(4px, 4px);
    }
 

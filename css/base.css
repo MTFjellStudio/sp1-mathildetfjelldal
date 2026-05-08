@@ -91,3 +91,24 @@
       font-family: var(--font-body);
       font-size: var(--font-size-base);
    }
+
+/* ========================================
+	GLOBAL INTERACTIVE STATES (Focus, Active, Disabled)
+   ======================================== */
+
+   /* Global Focus  for keyboard accessibility) */
+*:focus-visible {
+   outline: 3px solid var(--color-red);
+   outline-offset: 3px;
+}
+
+/* Global Active when someone clicks a button) */
+button:active, .btn:active, .btn-mobile:active, .btn-cta:active, .btn-yellow:active {
+   transform: scale(0.98); 
+}
+
+/* Global Disabled (For the newsletter form) */
+input:disabled, button:disabled {
+   opacity: 0.5;
+   cursor: not-allowed;
+}
