@@ -104,15 +104,9 @@
     --divider-major: 6px;  /* header bottom, footer top */
     --divider-minor: 3px;  /* section dividers inside main */
     --divider-thin: 2px;   /* thin dividers for small elements */
-}
 
-@media (min-width: 900px) {
-   :root {
-      --divider-major: 12px;
-      --divider-minor: 6px;
-      --divider-thin: 3px;
-   }
-}
+
+
 
 /* ========================================
 	LAYOUT MARGINS & GUTTERS (MOBILE-FIRST)
@@ -122,10 +116,20 @@
 	TRANSITIONS & ANIMATIONS
    ======================================== */
 
+   --transition-base: 300ms ease-in-out;
+
 /* ========================================
 	HEADER ICON SIZING (MOBILE-FIRST)
    ======================================== */
-
+}
 /* ========================================
 	DESKTOP OVERRIDES (900PX+)
    ======================================== */
+
+   @media (min-width: 900px) {
+   :root {
+      --divider-major: 12px;
+      --divider-minor: 6px;
+      --divider-thin: 3px;
+   }
+}

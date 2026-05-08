@@ -72,6 +72,7 @@
       background-color: transparent;
       border: 4px solid var(--color-body);
       color: var(--color-body);
+      transition: background-color var(--transition-base), border-color var(--transition-base), color var(--transition-base);
    }
 
    .btn-cta.solar-exploration {
@@ -82,6 +83,7 @@
       background-color: transparent;
       border: 4px solid var(--color-body);
       color: var(--color-body);
+      transition: background-color var(--transition-base), border-color var(--transition-base), color var(--transition-base);
    }
 
    .btn-cta.sky-above-us {
@@ -92,6 +94,7 @@
       background-color: transparent;
       border: 4px solid var(--color-body);
       color: var(--color-body);
+      transition: background-color var(--transition-base), border-color var(--transition-base), color var(--transition-base);
    }
 
    .btn-white {
@@ -110,24 +113,36 @@
       line-height: 5rem;
    }
 
+   .btn-white .btn-text {
+      padding: 0.1rem 3rem; /* Adjust this to change the size of the white box */
+      border: var(--divider-minor) solid transparent; /* Invisible border prevents layout shift */
+      background-color: transparent;
+      transition: background-color var(--transition-base), border-color var(--transition-base);
+   }
+
+   .btn-white:hover .btn-text {
+      background-color: var(--color-bkg);
+      border-color: var(--color-body);
+   }
+
    .btn-white.category-kids:hover {
-      background-image: linear-gradient(var(--color-bkg), var(--color-bkg)), url("../images/project-images/kids-bkg-compressed.jpg");
-      background-size: clamp(130px, 38%, 280px) 3.2rem, cover;
-      background-position: center, top center;
+      background-image: url("../images/project-images/kids-bkg-compressed.jpg");
+      background-size: cover;
+      background-position: top center;
       background-repeat: no-repeat;
    }
 
    .btn-white.category-teachers:hover {
-      background-image: linear-gradient(var(--color-bkg), var(--color-bkg)), url("../images/project-images/professor-bkg-compressed.jpg");
-      background-size: clamp(130px, 38%, 280px) 3.2rem, cover;
-      background-position: center, center;
+      background-image: url("../images/project-images/professor-bkg-compressed.jpg");
+      background-size: cover;
+      background-position: center;
       background-repeat: no-repeat;
    }
 
    .btn-white.category-researchers:hover {
-      background-image: linear-gradient(var(--color-bkg), var(--color-bkg)), url("../images/project-images/scientist-bkg-compressed.jpg");
-      background-size: clamp(130px, 38%, 280px) 3.2rem, cover;
-      background-position: center, center;
+      background-image: url("../images/project-images/scientist-bkg-compressed.jpg");
+      background-size: cover;
+      background-position: center;
       background-repeat: no-repeat;
    }
 
