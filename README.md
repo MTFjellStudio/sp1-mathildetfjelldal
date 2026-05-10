@@ -35,3 +35,66 @@ The project consists of 6 interconnected HTML pages [20]:
 *   **Performance:** All image assets are compressed to approximately 200KB or less to ensure fast loading times [4].
 *   **Mimicked Functionality:** Features that typically require JavaScript or a backend are implemented as simple HTML links navigating to the "Coming Soon" placeholder page [4].
 
+
+
+AI_LOG
+
+Tool used: Google Gemini
+
+Date: 7 April 2026
+
+Purpose: Brainstorming ideas and wireframe suggestions. Specifically, analyzing low-fi and high-fi wireframes for desktop and mobile, planning the site architecture (such as routing target audiences from the homepage), and brainstorming how to apply the Bauhaus/Retro-Futurism aesthetic.
+
+Outcome: Established a clear visual hierarchy, refined the navigation flow (e.g., merging "Get Involved" into the "Events & Community" page).
+
+
+Tool used: Google Gemini
+
+Date: April 14 2026
+
+Purpose: Explaining concepts related to web development structure and content architecture. Discussed the logic of using "Parent Pages" versus "Detail Templates" (e.g., using the Cosmology page as a master template rather than building multiple individual exhibit pages), and how to logically organize content from the school brief.
+
+Outcome: Gained a clearer understanding of how to structure the site templates and efficiently distribute the provided text and image assets without overcrowding the UI.
+
+
+Tool used: Google Gemini
+
+Date: April 22-24 2026
+
+Purpose: Explaining concepts and brainstorming. Help with figuring out the best semantic architecture and parts of code are a msut and which are superfluous for the base structure. Also asked for help figuring out the more coplex parts of the page, like the Cosmology Widget and the use of images inside shapes.
+
+Outcome: Managed to establish a clean, semantic HTML/CSS architecture and successfully engineered the complex CSS for the Cosmology widget's animations and custom exhibition shapes without relying on JavaScript.
+
+
+Tool used: Google NotebookLM
+
+Date: May 1 - May 7, 2026
+
+Purpose: Debugging assistance by describing W3C HTML validation errors (e.g., iframe percentage widths, headers inside footers) and CSS positioning issues.
+
+Outcome: Successfully identified the root causes of the errors and corrected the code.
+
+
+Tool used: Google NotebookLM
+
+Date: May 1 - May 7, 2026
+
+Purpose: Explaining how to improve semantic HTML structure (e.g., simplifying the holiday-wrapper).
+
+Outcome: Improved understanding of semantic HTML nesting and the use of universal class names across pages and their limits.
+
+
+Tool used: Google Gemini
+
+Date: May 4 - May 7, 2026
+
+Purpose: Debugging assistance for interactive styling (hover visuals), responsive image cropping in media panels
+
+. Outcome: Successfully tuned hover visuals for contrast/motion and established a consistent responsive grid for the placeholder page.
+
+
+Tool used: GitHub Copilot
+
+Date: May 7, 2026 Purpose: Debugging assistance for dead links, header/footer asset path consistency, and mapping non-destination links.
+
+Outcome: Standardized logo paths across the site and successfully routed all placeholder links to the "Coming Soon" destination that werent going to one of the other pages, to prevent "duds".
