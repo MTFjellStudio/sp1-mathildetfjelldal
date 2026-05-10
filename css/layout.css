@@ -1384,6 +1384,7 @@
       justify-content: space-between;
       border-top: var(--divider-minor) solid var(--color-body);
       border-bottom: var(--divider-minor) solid var(--color-body);
+      min-height: 100px;
    }
 
    .blue-divider img {
